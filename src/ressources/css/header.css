@@ -111,6 +111,13 @@ body{
     margin-top: 10vh
 }
 
+.item-menu-link{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .header-menu-bottom{
     position: absolute;
     bottom: 0;
