@@ -5,13 +5,12 @@ import Home from './views/Home';
 import DomaineCompetency from './views/DomaineCompetency';
 import Header from './composants/Header';
 import Footer from './composants/Footer';
-import ScrollToTop from "./composants/ScrollToTop";
 
 export default function App() {
 
   return (
       <Router>
-          <ScrollToTop/>
+          <utilFunctions/>
           <div className='min-h-screen hero-gradient'>
               <Header/>
               <Routes>
