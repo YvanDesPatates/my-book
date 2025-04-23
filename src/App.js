@@ -28,13 +28,15 @@ export default function App() {
       <Router>
           <RouteChangeTracker/>
           <ScrollToTop/>
-          <Header/>
-          <Routes>
-              <Route path='/' element={<Home/>}/>
-              <Route path="/domaine_de_competence/:domaineKey" element={<DomaineCompetency/>}/>
-              <Route path='*' element={<Navigate to="/"/>}/>
-          </Routes>
-          <Footer/>
+          <div className='min-h-screen hero-gradient'>
+              <Header/>
+              <Routes>
+                  <Route path='/' element={<Home/>}/>
+                  <Route path="/domaine_de_competence/:domaineKey" element={<DomaineCompetency/>}/>
+                  <Route path='*' element={<Navigate to="/"/>}/>
+              </Routes>
+              <Footer/>
+          </div>
       </Router>
   );
 }
