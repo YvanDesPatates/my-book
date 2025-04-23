@@ -1,6 +1,6 @@
-# Simple React website to present my book
+# React website to present my book
 
-### Launch the site localy for the first time :
+### Launch the site locally for the first time :
 
 ```
 npm i
