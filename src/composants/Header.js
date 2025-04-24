@@ -3,10 +3,6 @@ import {getDomaineCompetencylist} from "../ressources/domaine_competency_info";
 import {Link} from 'react-router-dom';
 import {useHandleNavigate} from "./UtilFunctions";
 
-const get_domaine_url = (domaineKey) => {
-    return '/domaine_de_competence/'.concat(domaineKey)
-}
-
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const handleNavigate = useHandleNavigate();
