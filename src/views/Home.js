@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import '../ressources/css/home.css'
 import {useNavigate} from 'react-router-dom';
 
-import avatarImg from '../ressources/images/Ymoji.png'
+import centralImg from '../ressources/images/pixel_Y.png'
 
 export default function Home() {
     const navigate = useNavigate()
@@ -34,7 +34,7 @@ export default function Home() {
 
                 {/* avatar and skills orbs arround */}
                 <div className="avatar-container mb-16" >
-                    <img src={avatarImg} alt="avatar"
+                    <img src={centralImg} alt="avatar"
                          className="avatar border-4 border-white"/>
 
                     <div className="skill-orb-games">
