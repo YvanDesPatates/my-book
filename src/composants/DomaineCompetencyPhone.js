@@ -1,7 +1,7 @@
 import '../ressources/css/domaineCompetencyPhone.css'
 
 
-export default function DomaineCompetencyPhone (domaineKey){
+export default function DomaineCompetencyPhone ({domaineKey}){
 
 
     return (
