@@ -14,7 +14,7 @@ export default function Home() {
         <main className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-12">
             <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-4">
-                    Game Developer & App Developer
+                    Game & App Developer
                 </h1>
                 <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
                     Je progresse au quotidien en imaginant et créant des jeux et apps que j'aime !
