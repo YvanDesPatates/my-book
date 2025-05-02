@@ -1,17 +1,23 @@
 const domaine_competency = [
     {
-        key:"Game Developer"
+        key:"Game-Developer"
     },
     {
-        key: "Web Developer"
+        key: "Web-Developer"
     },
     {
         key: "IA"
     },
+    {
+        key: "Architecture-logiciel"
+    },
+    {
+        key: "Blender"
+    },
 
 ];
 
-export function getDomaineCompetency(){
+export function getDomaineCompetencylist(){
     return domaine_competency;
 }
 
