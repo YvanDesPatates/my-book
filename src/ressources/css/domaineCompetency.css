@@ -1,0 +1,53 @@
+
+.divider {
+    position: relative;
+    height: 3px;
+    margin: 3rem 0;
+    background: linear-gradient(90deg, #7F00FF 0%, #00F5FF 50%, #FF2D75 100%);
+    border-radius: 3px;
+}
+
+.divider:after {
+    content: "✦";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 0 15px;
+    color: #7F00FF;
+    font-size: 1.2rem;
+}
+
+/* Title animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #7F00FF, #00F5FF, #FF2D75, #7F00FF);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 8s ease infinite;
+}
+
+.gradient-text2 {
+    background: linear-gradient(90deg, #1d6029, #2c913f, rgba(45, 255, 167, 0.9));
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 8s ease infinite;
+
+    /* Title animation end */
+}
