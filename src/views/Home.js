@@ -1,10 +1,13 @@
 import '../ressources/css/home.css';
 import centralImg from '../ressources/images/pixel_Y.png';
 import SkillOrb from '../composants/SkillOrb';
+import {useNavigate} from "react-router-dom";
 
 const get_domaine_url = (domaineKey) => `/domaine_de_competence/${domaineKey}`;
 
 export default function Home() {
+    const navigate = useNavigate()
+
     return (
         <main className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-12">
             <div className="max-w-4xl mx-auto text-center">

@@ -1,13 +1,19 @@
-
-import logo from '../ressources/images/egg.png'
-import {useHandleNavigate} from "./UtilFunctions";
+import logo from '../ressources/images/egg.png';
+import { useHandleNavigate } from './UtilFunctions';
+import SkillOrb from './SkillOrb';
+import { useLocation } from 'react-router-dom';
 
 export default function Footer() {
     const handleNavigate = useHandleNavigate();
+    const location = useLocation();
+
+    // Vérifie si on est sur la page Home
+    const isHomePage = location.pathname === '/';
 
     return (
-        <footer class="py-6 px-4">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center flex-col-reverse md:flex-row">
+        <footer className="py-6 px-4">
+            <div
+                className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center flex-col-reverse md:flex-row">
                 <div className="mb-4 md:mb-0">
                     <img
                         src={logo}
@@ -17,12 +23,48 @@ export default function Footer() {
                         style={{ cursor: 'pointer' }}
                     />
                 </div>
+                {!isHomePage && (
+                    <div className="flex space-x-4">
+                        <SkillOrb
+                            iconClass="fas fa-gamepad"
+                            gradientClass="bg-gradient-to-br from-blue-100 to-blue-200"
+                            colorClass="text-blue-600"
+                            link="/domaine_de_competence/Game-Developer"
+                        />
+                        <SkillOrb
+                            iconClass="fas fa-mobile-alt"
+                            gradientClass="bg-gradient-to-br from-purple-100 to-purple-200"
+                            colorClass="text-purple-600"
+                            link="/domaine_de_competence/Web-Developer"
+                        />
+                        <SkillOrb
+                            iconClass="fas fa-code-branch"
+                            gradientClass="bg-gradient-to-br from-green-100 to-green-200"
+                            colorClass="text-green-600"
+                            link="/domaine_de_competence/Architecture-logiciel"
+                        />
+                        <SkillOrb
+                            iconClass="fas fa-brain"
+                            gradientClass="bg-gradient-to-br from-red-100 to-red-200"
+                            colorClass="text-red-600"
+                            link="/domaine_de_competence/IA"
+                        />
+                        <SkillOrb
+                            iconClass="fas fa-cube"
+                            gradientClass="bg-gradient-to-br from-yellow-100 to-yellow-200"
+                            colorClass="text-yellow-600"
+                            link="/domaine_de_competence/Blender"
+                        />
+                    </div>
+                )}
                 <div className="flex space-x-6 mb-4 md:mb-0">
-                    <a href="https://github.com/YvanDesPatates" class="text-gray-500 hover:text-sky-600 transition">
+                    <a href="https://github.com/YvanDesPatates" className="text-gray-500 hover:text-sky-600 transition">
                         <i className="fab fa-github text-xl simple-hover-animation"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/yvan-roux-developer/"
-                       className="text-gray-500 hover:text-sky-600 transition">
+                    <a
+                        href="https://www.linkedin.com/in/yvan-roux-developer/"
+                        className="text-gray-500 hover:text-sky-600 transition"
+                    >
                         <i className="fab fa-linkedin text-xl simple-hover-animation"></i>
                     </a>
                     <a href="mailto:yvanroux99@gmail.com" className="text-gray-500 hover:text-sky-600 transition">
@@ -34,5 +76,5 @@ export default function Footer() {
                 </div>
             </div>
         </footer>
-    )
+    );
 }
