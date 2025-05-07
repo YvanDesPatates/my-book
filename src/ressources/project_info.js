@@ -37,14 +37,10 @@ const project_info = [
 
 ];
 
-export function getProjectList(){
-    return project_info;
-}
-
-export function getProjectByKey(key){
-    return project_info.find(project => project.key === key);
-}
-
+/**
+ * @param keys
+ * @returns related projects with the same order as "keys" array
+ */
 export function getManyProjectByKeys(keys){
-    return project_info.filter(project => keys.includes(project.key));
+    return keys.map(key => project_info.find(project => project.key === key)).filter(project => project !== undefined);
 }
