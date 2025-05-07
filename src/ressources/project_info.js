@@ -7,7 +7,7 @@ const project_info = [
         tags: ["Game", "Unity", "C#"],
     },
     {
-        key: "Whatsinpic",
+        key: "whatsinpic",
         name: "What's in Pic",
         imageName: "dachshund2.gif",
         short_desc: "A game where you have to guess the picture",

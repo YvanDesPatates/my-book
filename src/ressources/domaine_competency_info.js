@@ -1,18 +1,23 @@
 const domaine_competency = [
     {
-        key:"Game-Developer"
+        key:"Game-Developer",
+        projects_keys: ["dogjammmer", "whatsinpic", "poorsausage"],
     },
     {
-        key: "Web-Developer"
+        key: "Web-Developer",
+        projects_keys: ["personaljsframework", "opensilex", "whatsinpic", "dogjammmer", "poorsausage"],
     },
     {
-        key: "IA"
+        key: "IA",
+        projects_keys: ["dogjammmer", "whatsinpic", "poorsausage"],
     },
     {
-        key: "Architecture-logiciel"
+        key: "Architecture-logiciel",
+        projects_keys: ["personaljsframework", "opensilex"],
     },
     {
-        key: "Blender"
+        key: "Blender",
+        projects_keys: [""]
     },
 
 ];
