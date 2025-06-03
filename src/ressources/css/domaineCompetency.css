@@ -19,6 +19,11 @@
     font-size: 1.2rem;
 }
 
+.border-gradient {
+    border-image-source: linear-gradient(90deg, #7F00FF, #00F5FF, #FF2D75);
+    border-image-slice: 1;
+}
+
 /* Title animation */
 @keyframes gradientShift {
     0% {

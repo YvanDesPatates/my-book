@@ -1,6 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { getDomaineCompetencyByKey } from "../ressources/domaine_competency_info";
+import {useParams} from 'react-router-dom';
+import {getDomaineCompetencyByKey} from "../ressources/domaine_competency_info";
 import ProjectCard from "../composants/ProjectCard";
 import '../ressources/css/domaineCompetency.css';
 import {getManyProjectByKeys} from "../ressources/project_info";
@@ -20,6 +20,24 @@ export default function DomaineCompetency() {
                     <h1 className="text-3xl md:text-5xl font-bold mb-2 gradient-text2">
                         {domaineCompetency.key}
                     </h1>
+                </div>
+            </div>
+
+            {/* description and tags */}
+            <div className="container mx-auto px-4 py-6 max-w-6xl">
+                <p
+                    className="text-lg text-gray-700 mb-4 text-center"
+                    dangerouslySetInnerHTML={{__html: domaineCompetency.description}}
+                ></p>
+                <div className="flex flex-wrap justify-center gap-2 mt-4">
+                    {domaineCompetency.tags?.map((tag, index) => (
+                        <span
+                            key={index}
+                            className="inline-block bg-purple-200 text-purple-800 text-sm font-semibold px-3 py-1 rounded-full"
+                        >
+                            {tag}
+                        </span>
+                    ))}
                 </div>
             </div>
 
