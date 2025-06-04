@@ -50,7 +50,9 @@ export default function ProjectCard({ project }) {
                 </div>
                 <div className="md:w-3/5 p-8">
                     <h2 className="text-3xl font-bold text-gray-800 font-display mb-4">{project.name}</h2>
-                    <p className="text-lg text-gray-600 italic mb-6">{project.short_desc}</p>
+                    <p className="text-lg text-gray-600 mb-6"
+                        dangerouslySetInnerHTML={{ __html: project.short_desc }}
+                    />
 
                     {/* Links section */}
                     <div className="flex flex-wrap">
@@ -67,7 +69,7 @@ export default function ProjectCard({ project }) {
                         ))}
                     </div>
 
-                    {/* tags section */}
+                        {/* tags section */}
                     <div className="flex flex-wrap">
                         {project.tags.map((tag, index) => (
                             <span key={index} className="tag">
