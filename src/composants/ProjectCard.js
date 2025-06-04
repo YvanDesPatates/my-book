@@ -51,7 +51,24 @@ export default function ProjectCard({ project }) {
                 <div className="md:w-3/5 p-8">
                     <h2 className="text-3xl font-bold text-gray-800 font-display mb-4">{project.name}</h2>
                     <p className="text-lg text-gray-600 italic mb-6">{project.short_desc}</p>
-                    <div className="flex flex-wrap gap-3">
+
+                    {/* Links section */}
+                    <div className="flex flex-wrap">
+                        {project.links.map((link, index) => (
+                            <a
+                                key={index}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="link"
+                            >
+                                {link.name}
+                            </a>
+                        ))}
+                    </div>
+
+                    {/* tags section */}
+                    <div className="flex flex-wrap">
                         {project.tags.map((tag, index) => (
                             <span key={index} className="tag">
                                 {tag}

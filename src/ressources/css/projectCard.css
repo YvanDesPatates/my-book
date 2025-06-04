@@ -22,3 +22,20 @@
     transform: translateY(-2px) scale(1.01);
     box-shadow: 0 20px 40px -10px rgba(127, 0, 255, 0.3);
 }
+
+.link {
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    font-weight: 600;
+    background-color: #d5fff9;
+    color: #3B82F6;
+    padding: 0.15rem 0.65rem;
+    margin-right: 1%;
+    margin-bottom: 3%;
+}
+
+.link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: underline;
+}
