@@ -37,6 +37,7 @@ export default function ProjectCard({ project }) {
     return (
         <div ref={cardRef} className="project-card mb-16">
             <div className="md:flex">
+                {/* Title and image section */}
                 <div className="md:w-2/5 p-6 flex justify-center items-center">
                     <div className="relative group">
                         <img
@@ -52,7 +53,7 @@ export default function ProjectCard({ project }) {
                     <p className="text-lg text-gray-600 italic mb-6">{project.short_desc}</p>
                     <div className="flex flex-wrap gap-3">
                         {project.tags.map((tag, index) => (
-                            <span key={index} className="tag px-4 py-1 bg-electric bg-opacity-10 text-electric">
+                            <span key={index} className="tag">
                                 {tag}
                             </span>
                         ))}

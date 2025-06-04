@@ -15,3 +15,20 @@ body {
 .simple-hover-animation:hover {
     transform: translateY(-10px);
 }
+
+.tag {
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #E9D5FF;
+    color: #6B21AB ;
+    padding: 0.15rem 0.65rem;
+    margin-right: 1%;
+    margin-bottom: 3%;
+}
+
+.tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

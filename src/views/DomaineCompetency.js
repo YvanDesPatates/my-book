@@ -29,11 +29,11 @@ export default function DomaineCompetency() {
                     className="text-lg text-gray-700 mb-4 text-center"
                     dangerouslySetInnerHTML={{__html: domaineCompetency.description}}
                 ></p>
-                <div className="flex flex-wrap justify-center gap-2 mt-4">
+                <div className="flex flex-wrap justify-center">
                     {domaineCompetency.tags?.map((tag, index) => (
                         <span
                             key={index}
-                            className="inline-block bg-purple-200 text-purple-800 text-sm font-semibold px-3 py-1 rounded-full"
+                            className="tag"
                         >
                             {tag}
                         </span>

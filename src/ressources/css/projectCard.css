@@ -22,14 +22,3 @@
     transform: translateY(-2px) scale(1.01);
     box-shadow: 0 20px 40px -10px rgba(127, 0, 255, 0.3);
 }
-
-.tag {
-    transition: all 0.3s ease;
-    border-radius: 50px;
-    font-weight: 600;
-}
-
-.tag:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
