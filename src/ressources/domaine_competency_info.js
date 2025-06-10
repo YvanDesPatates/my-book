@@ -3,7 +3,7 @@ const domaine_competency = [
         key:"Game-Developer",
         description: "La création de jeux vidéo est un fil rouge depuis mes premiers pas dans le développement. Entre projets personnels, projets étudiants et game jams, j'ai pu explorer différents aspects du développement de jeux 2D, 3D et VR.",
         tags: ["Unity", "C#", "VR", "3D", "2D", "game design", "architecture logicielle"],
-        projects_keys: ["ebullixir", "dogjammmer", "poorsausage"],
+        projects_keys: ["ebullixir", "poorsausage", "flappytoucan", "dogjammmer", "submarine", "bataillenavale"],
     },
     {
         key: "Web-Developer",
