@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import '../ressources/css/projectCard.css';
 
 export default function ProjectCard({ project }) {
-    const image = require(`../ressources/images/projects/${project.imageName}`);
+    const image = project.imageName ? require(`../ressources/images/projects/${project.imageName}`) : require(`../ressources/images/projects/default.gif`);
     const cardRef = useRef(null);
 
     // Scroll apparition effect using Intersection Observer
@@ -56,7 +56,8 @@ export default function ProjectCard({ project }) {
 
                     {/* Links section */}
                     <div className="flex flex-wrap">
-                        {project.links.map((link, index) => (
+                        { project.links && project.links.length > 0 ?
+                            project.links.map((link, index) => (
                             <a
                                 key={index}
                                 href={link.url}
@@ -66,16 +67,21 @@ export default function ProjectCard({ project }) {
                             >
                                 {link.name}
                             </a>
-                        ))}
+                        ))
+                        : null
+                        }
                     </div>
 
                         {/* tags section */}
                     <div className="flex flex-wrap">
-                        {project.tags.map((tag, index) => (
+                        { project.tags && project.tags.length > 0 ?
+                            project.tags.map((tag, index) => (
                             <span key={index} className="tag">
                                 {tag}
                             </span>
-                        ))}
+                        ))
+                        : null
+                        }
                     </div>
                 </div>
             </div>
