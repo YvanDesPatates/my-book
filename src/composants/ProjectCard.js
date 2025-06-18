@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import '../ressources/css/projectCard.css';
+import CarouselModal from "./CarouselModal";
 
 export default function ProjectCard({ project }) {
     const image = project.imageName ? require(`../ressources/images/projects/${project.imageName}`) : require(`../ressources/images/projects/default.gif`);
@@ -90,6 +91,15 @@ export default function ProjectCard({ project }) {
                         : null
                         }
                     </div>
+
+                        {/* Carousel image*/}
+                        { project.images && project.images.length > 0 ?
+                            <CarouselModal
+                                images={project.images.map(imageName => require(`../ressources/images/projects/${imageName}`))}
+                            />
+                            :
+                            null
+                        }
                 </div>
             </div>
         </div>
