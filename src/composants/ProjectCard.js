@@ -41,7 +41,7 @@ export default function ProjectCard({ project }) {
             <div className="md:flex">
                 {/* Title and image section */}
                 <div className="md:w-2/5 p-6 flex justify-center items-center">
-                    <div className="relative group">
+                    <div className="group">
                         <img
                             src={image}
                             alt={project.name}
@@ -94,12 +94,14 @@ export default function ProjectCard({ project }) {
                     </div>
 
                     {/* Carousel modal */}
+                    {project.images && project.images.length > 0 ? (
                     <button
                         className="open-carousel-modal-button link"
                         onClick={() => setIsModalOpen(true)}
                     >
                         See more images
                     </button>
+                        ) : null}
 
                     {project.images && project.images.length > 0 ? (
                         <CarouselModal
