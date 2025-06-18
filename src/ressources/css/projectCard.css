@@ -44,3 +44,7 @@ li {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-decoration: underline;
 }
+
+.open-carousel-modal-button {
+    padding: 0.30rem 5rem;
+}

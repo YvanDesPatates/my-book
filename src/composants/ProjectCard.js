@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../ressources/css/projectCard.css';
 import CarouselModal from "./CarouselModal";
 
 export default function ProjectCard({ project }) {
     const image = project.imageName ? require(`../ressources/images/projects/${project.imageName}`) : require(`../ressources/images/projects/default.gif`);
     const cardRef = useRef(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     // Scroll apparition effect using Intersection Observer
     useEffect(() => {
@@ -45,61 +46,68 @@ export default function ProjectCard({ project }) {
                             src={image}
                             alt={project.name}
                             className="rounded-xl object-cover w-full h-auto shadow-xl transform group-hover:rotate-1 transition duration-500"
+                            onClick={() => setIsModalOpen(true)} // Open modal on image click
                         />
-                        <div className="absolute -inset-2 bg-neon opacity-20 rounded-xl blur-lg group-hover:opacity-30 transition duration-500"></div>
                     </div>
                 </div>
                 <div className="md:w-3/5 p-8">
                     <h2 className="text-3xl font-bold text-gray-800 font-display mb-4">{project.name}</h2>
 
-                    { /* Short description */}
+                    {/* Short description */}
                     <p className="italic text-gray-500 mb-6"
-                        dangerouslySetInnerHTML={{ __html: project.short_desc }}
+                       dangerouslySetInnerHTML={{__html: project.short_desc}}
                     />
 
-                    { /* Full description */}
+                    {/* Full description */}
                     <p className="text-gray-700 mb-6"
-                        dangerouslySetInnerHTML={{ __html: project.desc }}
+                       dangerouslySetInnerHTML={{__html: project.desc}}
                     />
 
                     {/* Links section */}
                     <div className="flex flex-wrap">
-                        { project.links && project.links.length > 0 ?
+                        {project.links && project.links.length > 0 ?
                             project.links.map((link, index) => (
-                            <a
-                                key={index}
-                                href={link.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="link"
-                            >
-                                {link.name}
-                            </a>
-                        ))
-                        : null
+                                <a
+                                    key={index}
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="link"
+                                >
+                                    {link.name}
+                                </a>
+                            ))
+                            : null
                         }
                     </div>
 
-                        {/* tags section */}
+                    {/* Tags section */}
                     <div className="flex flex-wrap">
-                        { project.tags && project.tags.length > 0 ?
+                        {project.tags && project.tags.length > 0 ?
                             project.tags.map((tag, index) => (
-                            <span key={index} className="tag">
-                                {tag}
-                            </span>
-                        ))
-                        : null
+                                <span key={index} className="tag">
+                                    {tag}
+                                </span>
+                            ))
+                            : null
                         }
                     </div>
 
-                        {/* Carousel image*/}
-                        { project.images && project.images.length > 0 ?
-                            <CarouselModal
-                                images={project.images.map(imageName => require(`../ressources/images/projects/${imageName}`))}
-                            />
-                            :
-                            null
-                        }
+                    {/* Carousel modal */}
+                    <button
+                        className="open-carousel-modal-button link"
+                        onClick={() => setIsModalOpen(true)}
+                    >
+                        See more images
+                    </button>
+
+                    {project.images && project.images.length > 0 ? (
+                        <CarouselModal
+                            images={project.images.map(imageName => require(`../ressources/images/projects/${imageName}`))}
+                            isOpen={isModalOpen}
+                            onClose={() => setIsModalOpen(false)}
+                        />
+                    ) : null}
                 </div>
             </div>
         </div>
