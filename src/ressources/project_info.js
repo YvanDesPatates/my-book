@@ -24,6 +24,12 @@ const project_info = [
         name: "Poor Sausage",
         imageName: "dachshund2.gif",
         short_desc: "Jeu vidéo 3D où un teckel doit collecter des saucisses tout en évitant des obstacles. <em class='underline'>Inspiré par Poor Bunny</em>",
+        desc: "Jeu vidéo <strong>développé de zéro, en solo en tant que projet personnel</strong>. J'ai voulu faire une version 3D du jeu Poor Bunny, en y intégrant en bonus ma passion pour les teckels !</br></br>" +
+            "J'ai profité de ce projet pour me creuser un peu la tête sur le game design, car convertir un jeu 2D en 3D soulève beaucoup de questionnements. J'ai nottement eu à réfléchir sur le ltype d'obstacle qui serait assez lisible en 3D pour procurer de la difficulté sans être frustrant.</br></br>" +
+            "Ce projet m'as également confronté à quelques difficultées techniques intéressantes :</br>"+
+            "<ul>"+
+            "<li>Un système qui met le jeu et tout ces composants à l'arrêt complet durant le game-over <em>( résolu grâce à un pattern observer classique, mais efficace )</em>.</li>" +
+            "<li>La gestion des collisions à haute vitesse <em>( résolu en lisant la documentation de Unity)</em>.</li> </ul>",
         links: [
             {name: "Github repository", url: "https://github.com/YvanDesPatates/Poor_Sausage"},
             {name: "Jouer en ligne", url: "https://play.unity.com/en/games/81b809b4-a345-4818-85c2-2234df7be171/poorsausage"},
@@ -36,8 +42,8 @@ const project_info = [
         name: "Submarine",
         imageName: "dachshund.gif",
         short_desc: "Jeu de survie en 2D pixel art réalisé en équipe à l'occasion d'une game jam.",
-        desc: "Participer à une Game Jam m'as permis de découvrir le travail en équipe dans le développement de jeux vidéo.</br>" +
-            "En moins de 48h nous réussis à créer un jeu de survie en 2D pixel art où le joueur doit survivre dans un sous-marin, en collectant des algues pour réalimenter le sous-marin en oxygène.</br>" +
+        desc: "Participer à une Game Jam m'as permis de découvrir le travail en équipe dans le développement de jeux vidéo.</br></br>" +
+            "En moins de 48h on a réussi à créer un jeu de survie en 2D pixel art où le joueur doit survivre dans un sous-marin, en collectant des algues pour réalimenter le sous-marin en oxygène.</br></br>  " +
             "Assumant le rôle de Gameplay Developer, j'ai découvert les difficultés de la création d'un jeu en équipe, notamment la gestion des conflits, la répartition des tâches et la difficulté de maintenir une cohésion d'équipe entre des étudiants qui manquent de sommeil.",
         links: [
             {name: "Github repository", url: "https://github.com/YvanDesPatates/seaPanda"},
@@ -50,7 +56,7 @@ const project_info = [
         name: "Flappy Toucan",
         imageName: "dachshund2.gif",
         short_desc: "Flappy Bird, mais avec un toucan !",
-        desc: "C'est le seul projet qui provient d'un tutoriel que je mets ici. À l'instar de ce projet, j'ai suivi de nombreux tutoriels pour apprendre les bases de Unity et C# avant de me lancer sur mes projets de jeux personnels. J'ai quand même ajouté ma touche personnelle à ce projet en créant moi même toutes les assets 2D et en ajoutant de nouveaux obstacles pour le moins originaux ! </br> ATTENTION : bien qu'étant l'un des premiers projets que j'ai réalisé, c'est de loin le plus addictif !",
+        desc: "C'est le seul projet qui provient d'un tutoriel que je mets ici. À l'instar de ce projet, j'ai suivi de nombreux tutoriels pour apprendre les bases de Unity et C# avant de me lancer sur mes projets de jeux personnels.</br></br>J'ai quand même ajouté ma touche personnelle à ce projet en créant moi même toutes les assets 2D et en ajoutant de nouveaux obstacles pour le moins originaux ! </br></br> ATTENTION : bien qu'étant l'un des premiers projets que j'ai réalisé, c'est de loin le plus addictif !",
         tags: ["tutoriel", "assets maison", "Unity", "C#", "2D"],
     },
     {
