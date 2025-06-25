@@ -1,4 +1,4 @@
-import logo from '../ressources/images/egg.png';
+import logo from '../ressources/images/dachsundLogo.png';
 import {useHandleNavigate} from './UtilFunctions';
 import SkillOrb from './SkillOrb';
 import {useLocation} from 'react-router-dom';
@@ -19,7 +19,7 @@ export default function Footer() {
                     <img
                         src={logo}
                         alt="Logo"
-                        className="h-10 simple-hover-animation"
+                        className="logo simple-hover-animation"
                         onClick={() => handleNavigate('/')}
                         style={{cursor: 'pointer'}}
                     />
