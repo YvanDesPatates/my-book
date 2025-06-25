@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import '../ressources/css/carouselModal.css';
 
 export default function CarouselModal({ images, isOpen, onClose }) {
@@ -8,6 +8,10 @@ export default function CarouselModal({ images, isOpen, onClose }) {
     const [isSliding, setIsSliding] = useState(false);
     const touchStartX = useRef(null);
     const touchEndX = useRef(null);
+
+    useEffect(() => {
+        setCurrentIndex(0);
+    }, [isOpen]);
 
     const handleNext = () => {
         if (isSliding) return;
@@ -53,6 +57,17 @@ export default function CarouselModal({ images, isOpen, onClose }) {
         touchEndX.current = null;
     };
 
+    // Aller à une image précise via les points
+    const handlePointClick = (index) => {
+        if (isSliding || index === currentIndex) return;
+        setSlideDirection(index > currentIndex ? 'right' : 'left');
+        setIsSliding(true);
+        setTimeout(() => {
+            setCurrentIndex(index);
+            setIsSliding(false);
+        }, 300);
+    };
+
     if (!isOpen || !images.length) return null;
 
     return (
@@ -93,6 +108,8 @@ export default function CarouselModal({ images, isOpen, onClose }) {
                         <span
                             key={index}
                             className={`carousel-point ${index === currentIndex ? 'active' : ''}`}
+                            onClick={() => handlePointClick(index)}
+                            style={{ cursor: 'pointer' }}
                         ></span>
                     ))}
                 </div>
