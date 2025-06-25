@@ -22,9 +22,15 @@ export default function CarouselModal({ images, isOpen, onClose }) {
                     <button className="carousel-close-button" onClick={onClose}>
                         &times;
                     </button>
-                    <div className="click-zone left-zone" onClick={handlePrev}></div>
-                    <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="carousel-image" />
-                    <div className="click-zone right-zone" onClick={handleNext}></div>
+                    <div className="arrows">
+                        <button className="carousel-arrow prev-arrow" onClick={handlePrev}>
+                            &#8249;
+                        </button>
+                        <button className="carousel-arrow next-arrow" onClick={handleNext}>
+                            &#8250;
+                        </button>
+                    </div>
+                    <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="carousel-image"/>
                 </div>
                 <div className="carousel-points">
                     {images.map((_, index) => (
