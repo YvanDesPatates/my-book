@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../ressources/css/carouselModal.css';
 
 export default function CarouselModal({ images, isOpen, onClose }) {
+
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const handleNext = () => {
@@ -12,7 +13,7 @@ export default function CarouselModal({ images, isOpen, onClose }) {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
 
-    if (!isOpen) return null;
+    if (!isOpen || !images.length) return null;
 
     return (
         <div className="carousel-modal-overlay" onClick={onClose}>

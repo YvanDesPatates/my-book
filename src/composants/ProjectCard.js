@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import '../ressources/css/projectCard.css';
-import CarouselModal from "./CarouselModal";
+import { CarouselModalManager } from '../App';
 
 export default function ProjectCard({ project }) {
     const image = project.imageName ? require(`../ressources/images/projects/${project.imageName}`) : require(`../ressources/images/projects/default.gif`);
     const cardRef = useRef(null);
-    const [isModalOpen, setIsModalOpen] = useState(false);
 
     // Scroll apparition effect using Intersection Observer
     useEffect(() => {
@@ -36,6 +35,12 @@ export default function ProjectCard({ project }) {
         };
     }, []);
 
+    const openCarouselModal = () => {
+        if (project.images && project.images.length > 0) {
+            CarouselModalManager.open(project.images.map(imageName => require(`../ressources/images/projects/${imageName}`)));
+        }
+    };
+
     return (
         <div ref={cardRef} className="project-card mb-16">
             <div className="md:flex">
@@ -46,7 +51,7 @@ export default function ProjectCard({ project }) {
                             src={image}
                             alt={project.name}
                             className="rounded-xl object-cover w-full h-auto shadow-xl transform group-hover:rotate-1 transition duration-500"
-                            onClick={() => setIsModalOpen(true)} // Open modal on image click
+                            onClick={openCarouselModal} // Ouvre la modal sur clic image
                         />
                     </div>
                 </div>
@@ -95,21 +100,14 @@ export default function ProjectCard({ project }) {
 
                     {/* Carousel modal */}
                     {project.images && project.images.length > 0 ? (
-                    <button
-                        className="open-carousel-modal-button link"
-                        onClick={() => setIsModalOpen(true)}
-                    >
-                        See more images
-                    </button>
-                        ) : null}
-
-                    {project.images && project.images.length > 0 ? (
-                        <CarouselModal
-                            images={project.images.map(imageName => require(`../ressources/images/projects/${imageName}`))}
-                            isOpen={isModalOpen}
-                            onClose={() => setIsModalOpen(false)}
-                        />
+                        <button
+                            className="open-carousel-modal-button link"
+                            onClick={openCarouselModal}
+                        >
+                            See more images
+                        </button>
                     ) : null}
+
                 </div>
             </div>
         </div>
