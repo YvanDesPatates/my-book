@@ -32,7 +32,7 @@ const project_info = [
             "<li>La gestion des collisions à haute vitesse <em>( résolu en lisant la documentation de Unity)</em>.</li> </ul>",
         links: [
             {name: "Github repository", url: "https://github.com/YvanDesPatates/Poor_Sausage"},
-            {name: "Jouer en ligne", url: "https://play.unity.com/en/games/81b809b4-a345-4818-85c2-2234df7be171/poorsausage"},
+            {name: "Jouer en ligne", url: "https://play.unity.com/en/games/827d881e-648b-484c-b0a7-a13724a3f0e5/poorsausage"},
             {name: "Le jeu qui m'as inspiré", url: "https://poki.com/fr/g/poor-bunny"},
         ],
         tags: ["3D", "Unity", "C#"],
