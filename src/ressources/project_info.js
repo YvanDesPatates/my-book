@@ -52,12 +52,21 @@ const project_info = [
 
     },
     {
-        key: "flappytoucan",
-        name: "Flappy Toucan",
-        imageName: "dachshund2.gif",
-        short_desc: "Flappy Bird, mais avec un toucan !",
-        desc: "C'est le seul projet qui provient d'un tutoriel que je mets ici. À l'instar de ce projet, j'ai suivi de nombreux tutoriels pour apprendre les bases de Unity et C# avant de me lancer sur mes projets de jeux personnels.</br></br>J'ai quand même ajouté ma touche personnelle à ce projet en créant moi même toutes les assets 2D et en ajoutant de nouveaux obstacles pour le moins originaux ! </br></br> ATTENTION : bien qu'étant l'un des premiers projets que j'ai réalisé, c'est de loin le plus addictif !",
-        tags: ["tutoriel", "assets maison", "Unity", "C#", "2D"],
+        key: "tutos",
+        name: "Tutos en tout genre",
+        imageName: "tuto1.gif",
+        images: ["tuto1.png"],
+        short_desc: "Quoi de mieux pour apprendre que de suivre des tutoriels ?",
+        desc: "J'ai suivi de nombreux tutoriels pour apprendre les bases de Unity et C# avant de me lancer sur mes projets de jeux personnels.</br></br>" +
+            "J'ai parfois ajouté ma touche personnelle à ces projets, malheureusement j'ai perdu la plupart de ces projets... on ne répétera jamais assez l'importance du verisonning !</br></br>" +
+            "J'ai tout de même gardé quelques projets, que je vous invite à découvrir ci-dessous. Ils sont tous réalisés en Unity et C# avec beaucoup d'amour et de passion.",
+        links: [
+            {name: "jouer au tuto 1", url: "https://play.unity.com/en/games/0bd6b791-308a-4bbc-b5db-bdfb947f74c0/tuto1-feedanimals"},
+            {name: "jouer au tuto 2", url: "https://play.unity.com/en/games/eeb7493c-2bc2-4e19-8c59-ba50265cfb2f/tuto2-madrunner"},
+            {name: "repository tuto 1", url: "https://github.com/YvanDesPatates/unity_course_prototype_1"},
+            {name: "repository tuto 2", url: "https://github.com/YvanDesPatates/unity_course_prototype_2"},
+        ],
+        tags: ["tutoriels", "Unity", "C#", "3D"],
     },
     {
         key: "bataillenavale",
