@@ -55,7 +55,7 @@ const project_info = [
         key: "tutos",
         name: "Tutos en tout genre",
         imageName: "tuto1.gif",
-        images: ["tuto1.png"],
+        images: ["tuto2.gif", "tuto2.png", "tuto1.gif", "tuto1.png"],
         short_desc: "Quoi de mieux pour apprendre que de suivre des tutoriels ?",
         desc: "J'ai suivi de nombreux tutoriels pour apprendre les bases de Unity et C# avant de me lancer sur mes projets de jeux personnels.</br></br>" +
             "J'ai parfois ajouté ma touche personnelle à ces projets, malheureusement j'ai perdu la plupart de ces projets... on ne répétera jamais assez l'importance du verisonning !</br></br>" +
