@@ -2,10 +2,14 @@ const project_info = [
     {
         key: "ebullixir",
         name: "Ebullixir",
-        imageName: "dachshund2.gif",
+        imageName: "ebullixir-home_run.gif",
+        images: ["ebullixir-success_elixir.gif", "ebullixir-spider_and_client.gif", "ebullixir-cut_watermelon.gif", "ebullixir-recipie_and_client.gif", "ebullixir-failed_elixir.gif", "ebullixir-showup.gif", "ebullixir-home_run.gif"],
         short_desc: "Jeu vidéo VR de création de potions. Coupez, mélangez et faites bouillir des ingrédients pour créer des potions uniques.",
+        desc: "Développer ce jeu m'a véritablement donné le goût de la VR. Prendre en main le development kit VR de Unity a été un véritable plaisir, et j'ai adoré créer des interactions immersives pour le joueur.</br></br>" +
+            "Bien qu'ayant peu de temps pour développer ce jeu (prêt temporaire d'un casque VR par l'école), j'ai tout de même pris le temps de concevoir une base flexible et durable pour le système de recettes, qui est le cœur du jeu. </br></br>"+
+            "Quelques interfaces, quelques classes abstraites, un peu de réflexion sur l'architecture du code, et le tour est joué ! J'ai pu ainsi créer un système de recettes qui permet d'ajouter très facilement autant d'ingrédients, de potions et de recettes qu'on le veut.",
         links: [ {name: "Github repository", url: "https://github.com/YvanDesPatates/virtuality"} ],
-        tags: ["Game", "VR", "Unity", "C#"],
+        tags: ["Game", "VR", "Unity", "C#", "Architecture logicielle"],
     },
     {
         key: "dogjammmer",
