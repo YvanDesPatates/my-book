@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-book/static/css/main.67869e9d.css",
-    "main.js": "/my-book/static/js/main.91b8f45f.js",
+    "main.js": "/my-book/static/js/main.c9e7c08a.js",
     "static/media/ebullixir-success_elixir.gif": "/my-book/static/media/ebullixir-success_elixir.7d2a92231acb650c4f27.gif",
     "static/media/ebullixir-failed_elixir.gif": "/my-book/static/media/ebullixir-failed_elixir.51befff38e1a478fe12f.gif",
     "static/media/ebullixir-spider_and_client.gif": "/my-book/static/media/ebullixir-spider_and_client.d3cbd1a67bacb7f550f3.gif",
@@ -10,20 +10,30 @@
     "static/media/ebullixir-recipie_and_client.gif": "/my-book/static/media/ebullixir-recipie_and_client.6057a6ab995b57861a29.gif",
     "static/media/ebullixir-showup.gif": "/my-book/static/media/ebullixir-showup.a171bfd9a3b8ed4a7543.gif",
     "static/media/ebullixir-home_run.gif": "/my-book/static/media/ebullixir-home_run.1c0a19c54f3835636ea7.gif",
+    "static/media/poorsausage-demo.gif": "/my-book/static/media/poorsausage-demo.def122630bae20fc7d7a.gif",
+    "static/media/BN-ship_placement.gif": "/my-book/static/media/BN-ship_placement.5a6c6e1ba95b050f3bcc.gif",
+    "static/media/BN-shooting_ship.gif": "/my-book/static/media/BN-shooting_ship.ef4f342056c6ecc3ccf5.gif",
+    "static/media/BN-wrong_ship_placement.gif": "/my-book/static/media/BN-wrong_ship_placement.63bc0bbb467c42a72e24.gif",
+    "static/media/poorsausage-bullet.gif": "/my-book/static/media/poorsausage-bullet.a33370c4a98aab100859.gif",
     "static/media/dachshund2.gif": "/my-book/static/media/dachshund2.f0e219d44341460d6363.gif",
+    "static/media/poorsausage-laser.gif": "/my-book/static/media/poorsausage-laser.c287ff557302e08df153.gif",
+    "static/media/poorsausage-ax.gif": "/my-book/static/media/poorsausage-ax.9eac21a77720ce26ffce.gif",
     "static/media/tuto1.gif": "/my-book/static/media/tuto1.c26993540330d0ff8f24.gif",
     "static/media/tuto2.png": "/my-book/static/media/tuto2.e45303fbb65d8fec76be.png",
     "static/media/pixel_Y.png": "/my-book/static/media/pixel_Y.e9202766f2c93b4c18db.png",
     "static/media/tuto1.png": "/my-book/static/media/tuto1.1c271ff3dd768970a006.png",
+    "static/media/poorsausage-menu.gif": "/my-book/static/media/poorsausage-menu.b1d7956d8c1f4db2ce2e.gif",
     "static/media/dachshund.gif": "/my-book/static/media/dachshund.55688a82fc60afac26ab.gif",
     "static/media/default.gif": "/my-book/static/media/default.55688a82fc60afac26ab.gif",
     "static/media/dachsundLogo.png": "/my-book/static/media/dachsundLogo.df11d4c36d71d4806c83.png",
+    "static/media/BN-game.png": "/my-book/static/media/BN-game.a97d1a8e5fd5796fdba8.png",
+    "static/media/BN-explanations.png": "/my-book/static/media/BN-explanations.0a72a6bfd0318bd5af3d.png",
     "index.html": "/my-book/index.html",
     "main.67869e9d.css.map": "/my-book/static/css/main.67869e9d.css.map",
-    "main.91b8f45f.js.map": "/my-book/static/js/main.91b8f45f.js.map"
+    "main.c9e7c08a.js.map": "/my-book/static/js/main.c9e7c08a.js.map"
   },
   "entrypoints": [
     "static/css/main.67869e9d.css",
-    "static/js/main.91b8f45f.js"
+    "static/js/main.c9e7c08a.js"
   ]
 }
