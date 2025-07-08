@@ -76,7 +76,8 @@ const project_info = [
     {
         key: "bataillenavale",
         name: "Bataille Navale",
-        imageName: "dachshund.gif",
+        imageName: "BN-game.png",
+        images: ["BN-ship_placement.gif", "BN-wrong_ship_placement.gif", "BN-shooting_ship.gif", "BN-explanations.png", "BN-game.png"],
         short_desc: "Premier projet personnel : un jeu de bataille navale simpliste sur navigateur. Jeu en couch coop où il faut se passer l'ordinateur pour jouer (oui c'est étrange, c'est mon premier projet pou rappel).",
         desc: "Après moins de 4 mois en formation de développeur, j'ai décidé de me lancer dans mon premier projet personnel. Alors que mes compétences se limitent à HTML, CSS et des bases en Java et Javascript, je me suis lancé le défi de réaliser un jeu vidéo. Partant des quelques projets de sites webs et d'algos Java développés en cours, j'ai créé un jeu de bataille navale simpliste, mais fonctionnel !",
         links: [
