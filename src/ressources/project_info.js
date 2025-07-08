@@ -26,10 +26,11 @@ const project_info = [
     {
         key: "poorsausage",
         name: "Poor Sausage",
-        imageName: "dachshund2.gif",
+        imageName: "poorsausage-menu.gif",
+        images: ["poorsausage-bullet.gif", "poorsausage-demo.gif", "poorsausage-ax.gif", "poorsausage-laser.gif"],
         short_desc: "Jeu vidéo 3D où un teckel doit collecter des saucisses tout en évitant des obstacles. <em class='underline'>Inspiré par Poor Bunny</em>",
         desc: "Jeu vidéo <strong>développé de zéro, en solo en tant que projet personnel</strong>. J'ai voulu faire une version 3D du jeu Poor Bunny, en y intégrant en bonus ma passion pour les teckels !</br></br>" +
-            "J'ai profité de ce projet pour me creuser un peu la tête sur le game design, car convertir un jeu 2D en 3D soulève beaucoup de questionnements. J'ai nottement eu à réfléchir sur le ltype d'obstacle qui serait assez lisible en 3D pour procurer de la difficulté sans être frustrant.</br></br>" +
+            "J'ai profité de ce projet pour me creuser un peu la tête sur le game design, car convertir un jeu 2D en 3D soulève beaucoup de questionnements. J'ai nottement eu à réfléchir sur le type d'obstacle qui serait assez lisible en 3D pour procurer de la difficulté sans être frustrant.</br></br>" +
             "Ce projet m'as également confronté à quelques difficultées techniques intéressantes :</br>"+
             "<ul>"+
             "<li>Un système qui met le jeu et tout ces composants à l'arrêt complet durant le game-over <em>( résolu grâce à un pattern observer classique, mais efficace )</em>.</li>" +
@@ -39,7 +40,7 @@ const project_info = [
             {name: "Jouer en ligne", url: "https://play.unity.com/en/games/827d881e-648b-484c-b0a7-a13724a3f0e5/poorsausage"},
             {name: "Le jeu qui m'as inspiré", url: "https://poki.com/fr/g/poor-bunny"},
         ],
-        tags: ["3D", "Unity", "C#"],
+        tags: ["3D", "Unity", "C#", "Architecture logicielle"],
     },
     {
         key: "submarine",
