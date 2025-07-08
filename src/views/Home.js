@@ -14,13 +14,21 @@ export default function Home() {
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-4">
                     Game & App Developer
                 </h1>
-                <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-2 max-w-3xl mx-auto">
                     Je progresse au quotidien en imaginant et créant des jeux et apps que j'aime !
+                </p>
+
+                <p className="text-xs md:text-sm text-gray-600 max-w-3xl mx-auto">
+                    ✨ Bienvenue sur mon portfolio ! ✨
+                </p>
+                <p className="text-xs md:text-sm text-gray-600 max-w-3xl mb-12">
+                    ✨ Naviguez à travers mes projets en cliquant sur mes différents
+                    univers ✨
                 </p>
 
                 {/* Avatar and skill orbs */}
                 <div className="avatar-container mb-16">
-                    <img src={centralImg} alt="avatar" className="avatar border-4 border-white" />
+                    <img src={centralImg} alt="avatar" className="avatar border-4 border-white"/>
 
                     <SkillOrb
                         iconClass="fas fa-gamepad"
@@ -64,7 +72,7 @@ export default function Home() {
                     <p
                         className="skill-tag bg-white/80 backdrop-blur-sm rounded-full py-2 px-4 text-sm font-medium text-gray-700 hover:bg-white transition flex items-center justify-center space-x-2"
                         onClick={() => navigate(get_domaine_url('Game-Developer'))}
-                        style={{ cursor: 'pointer' }}
+                        style={{cursor: 'pointer'}}
                     >
                         <i className="fas fa-gamepad text-blue-500"></i>
                         <span>Jeu vidéo</span>
@@ -72,7 +80,7 @@ export default function Home() {
                     <p
                         className="skill-tag bg-white/80 backdrop-blur-sm rounded-full py-2 px-4 text-sm font-medium text-gray-700 hover:bg-white transition flex items-center justify-center space-x-2"
                         onClick={() => navigate(get_domaine_url('Web-Developer'))}
-                        style={{ cursor: 'pointer' }}
+                        style={{cursor: 'pointer'}}
                     >
                         <i className="fas fa-mobile-alt text-purple-500"></i>
                         <span>Applications</span>
@@ -80,7 +88,7 @@ export default function Home() {
                     <p
                         className="skill-tag bg-white/80 backdrop-blur-sm rounded-full py-2 px-4 text-sm font-medium text-gray-700 hover:bg-white transition flex items-center justify-center space-x-2"
                         onClick={() => navigate(get_domaine_url('Architecture-logiciel'))}
-                        style={{ cursor: 'pointer' }}
+                        style={{cursor: 'pointer'}}
                     >
                         <i className="fas fa-code-branch text-green-500"></i>
                         <span>Architecture</span>
@@ -88,7 +96,7 @@ export default function Home() {
                     <p
                         className="skill-tag bg-white/80 backdrop-blur-sm rounded-full py-2 px-4 text-sm font-medium text-gray-700 hover:bg-white transition flex items-center justify-center space-x-2"
                         onClick={() => navigate(get_domaine_url('IA'))}
-                        style={{ cursor: 'pointer' }}
+                        style={{cursor: 'pointer'}}
                     >
                         <i className="fas fa-brain text-red-500"></i>
                         <span>IA</span>
@@ -96,7 +104,7 @@ export default function Home() {
                     <p
                         className="skill-tag bg-white/80 backdrop-blur-sm rounded-full py-2 px-4 text-sm font-medium text-gray-700 hover:bg-white transition flex items-center justify-center space-x-2"
                         onClick={() => navigate(get_domaine_url('Blender'))}
-                        style={{ cursor: 'pointer' }}
+                        style={{cursor: 'pointer'}}
                     >
                         <i className="fas fa-cube text-yellow-500"></i>
                         <span>Blender</span>
