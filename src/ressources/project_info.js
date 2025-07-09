@@ -2,8 +2,8 @@ const project_info = [
     {
         key: "ebullixir",
         name: "Ebullixir",
-        imageName: "ebullixir-home_run.gif",
-        images: ["ebullixir-success_elixir.gif", "ebullixir-spider_and_client.gif", "ebullixir-cut_watermelon.gif", "ebullixir-recipie_and_client.gif", "ebullixir-failed_elixir.gif", "ebullixir-showup.gif", "ebullixir-home_run.gif"],
+        imageName: "ebullixir-home_run.mp4",
+        images: ["ebullixir-success_elixir.mp4", "ebullixir-spider_and_client.mp4", "ebullixir-cut_watermelon.mp4", "ebullixir-recipie_and_client.mp4", "ebullixir-failed_elixir.mp4", "ebullixir-showup.mp4", "ebullixir-home_run.mp4"],
         short_desc: "Jeu vidéo VR de création de potions. Coupez, mélangez et faites bouillir des ingrédients pour créer des potions uniques.",
         desc: "Développer ce jeu m'a véritablement donné le goût de la VR. Prendre en main le development kit VR de Unity a été un véritable plaisir, et j'ai adoré créer des interactions immersives pour le joueur.</br></br>" +
             "Bien qu'ayant peu de temps pour développer ce jeu (prêt temporaire d'un casque VR par l'école), j'ai tout de même pris le temps de concevoir une base flexible et durable pour le système de recettes, qui est le cœur du jeu. </br></br>"+
@@ -26,8 +26,8 @@ const project_info = [
     {
         key: "poorsausage",
         name: "Poor Sausage",
-        imageName: "poorsausage-menu.gif",
-        images: ["poorsausage-bullet.gif", "poorsausage-demo.gif", "poorsausage-ax.gif", "poorsausage-laser.gif"],
+        imageName: "poorsausage-menu.mp4",
+        images: ["poorsausage-bullet.mp4", "poorsausage-demo.mp4", "poorsausage-ax.gif", "poorsausage-laser.mp4"],
         short_desc: "Jeu vidéo 3D où un teckel doit collecter des saucisses tout en évitant des obstacles. <em class='underline'>Inspiré par Poor Bunny</em>",
         desc: "Jeu vidéo <strong>développé de zéro, en solo en tant que projet personnel</strong>. J'ai voulu faire une version 3D du jeu Poor Bunny, en y intégrant en bonus ma passion pour les teckels !</br></br>" +
             "J'ai profité de ce projet pour me creuser un peu la tête sur le game design, car convertir un jeu 2D en 3D soulève beaucoup de questionnements. J'ai nottement eu à réfléchir sur le type d'obstacle qui serait assez lisible en 3D pour procurer de la difficulté sans être frustrant.</br></br>" +
@@ -59,8 +59,8 @@ const project_info = [
     {
         key: "tutos",
         name: "Tutos en tout genre",
-        imageName: "tuto1.gif",
-        images: ["tuto2.gif", "tuto2.png", "tuto1.gif", "tuto1.png"],
+        imageName: "tuto1.mp4",
+        images: ["tuto2.mp4", "tuto2.png", "tuto1.mp4", "tuto1.png"],
         short_desc: "Quoi de mieux pour apprendre que de suivre des tutoriels ?",
         desc: "J'ai suivi de nombreux tutoriels pour apprendre les bases de Unity et C# avant de me lancer sur mes projets de jeux personnels.</br></br>" +
             "J'ai parfois ajouté ma touche personnelle à ces projets, malheureusement j'ai perdu la plupart de ces projets... on ne répétera jamais assez l'importance du verisonning !</br></br>" +
@@ -77,7 +77,7 @@ const project_info = [
         key: "bataillenavale",
         name: "Bataille Navale",
         imageName: "BN-game.png",
-        images: ["BN-ship_placement.gif", "BN-wrong_ship_placement.gif", "BN-shooting_ship.gif", "BN-explanations.png", "BN-game.png"],
+        images: ["BN-ship_placement.mp4", "BN-wrong_ship_placement.mp4", "BN-shooting_ship.mp4", "BN-explanations.png", "BN-game.png"],
         short_desc: "Premier projet personnel : un jeu de bataille navale simpliste sur navigateur. Jeu en couch coop où il faut se passer l'ordinateur pour jouer (oui c'est étrange, c'est mon premier projet pou rappel).",
         desc: "Après moins de 4 mois en formation de développeur, j'ai décidé de me lancer dans mon premier projet personnel. Alors que mes compétences se limitent à HTML, CSS et des bases en Java et Javascript, je me suis lancé le défi de réaliser un jeu vidéo. Partant des quelques projets de sites webs et d'algos Java développés en cours, j'ai créé un jeu de bataille navale simpliste, mais fonctionnel !",
         links: [
