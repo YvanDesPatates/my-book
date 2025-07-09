@@ -8,6 +8,12 @@ import Footer from './composants/Footer';
 import CarouselModal from './composants/CarouselModal';
 import React, { useState, useEffect } from 'react';
 
+import { useScrollToTop } from './composants/UtilFunctions';
+function ScrollToTop() {
+    useScrollToTop();
+    return null;
+}
+
 // used to open the carousel modal from anywhere in the app
 export class CarouselModalManager {
     static open;
@@ -26,6 +32,7 @@ export default function App() {
 
     return (
         <Router>
+            <ScrollToTop/>
             <CarouselModal
                 images={modalImages}
                 isOpen={modalOpen}
