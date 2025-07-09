@@ -90,18 +90,36 @@ export default function CarouselModal({ images, isOpen, onClose }) {
                             &#8250;
                         </button>
                     </div>
-                    <img
-                        src={images[currentIndex]}
-                        alt={`Slide ${currentIndex + 1}`}
-                        className={
-                            `carousel-image` +
-                            (isSliding && slideDirection === 'right' ? ' slide-out-left' : '') +
-                            (isSliding && slideDirection === 'left' ? ' slide-out-right' : '') +
-                            (!isSliding && slideDirection === 'right' ? ' slide-in-right' : '') +
-                            (!isSliding && slideDirection === 'left' ? ' slide-in-left' : '')
-                        }
-                        onAnimationEnd={() => setSlideDirection(null)}
-                    />
+                    {
+                        images[currentIndex].toLowerCase().endsWith('.mp4') ? (
+                            <video
+                                src={images[currentIndex]}
+                                autoPlay
+                                loop
+                                className={
+                                    `carousel-image` +
+                                    (isSliding && slideDirection === 'right' ? ' slide-out-left' : '') +
+                                    (isSliding && slideDirection === 'left' ? ' slide-out-right' : '') +
+                                    (!isSliding && slideDirection === 'right' ? ' slide-in-right' : '') +
+                                    (!isSliding && slideDirection === 'left' ? ' slide-in-left' : '')
+                                }
+                                onAnimationEnd={() => setSlideDirection(null)}
+                            />
+                        ) : (
+                            <img
+                                src={images[currentIndex]}
+                                alt={`Slide ${currentIndex + 1}`}
+                                className={
+                                    `carousel-image` +
+                                    (isSliding && slideDirection === 'right' ? ' slide-out-left' : '') +
+                                    (isSliding && slideDirection === 'left' ? ' slide-out-right' : '') +
+                                    (!isSliding && slideDirection === 'right' ? ' slide-in-right' : '') +
+                                    (!isSliding && slideDirection === 'left' ? ' slide-in-left' : '')
+                                }
+                                onAnimationEnd={() => setSlideDirection(null)}
+                            />
+                        )
+                    }
                 </div>
                 <div className="carousel-points">
                     {images.map((_, index) => (

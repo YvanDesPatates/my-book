@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useEffect, useRef} from 'react';
 import '../ressources/css/projectCard.css';
-import { CarouselModalManager } from '../App';
+import {CarouselModalManager} from '../App';
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({project}) {
     const image = project.imageName ? require(`../ressources/images/projects/${project.imageName}`) : require(`../ressources/images/projects/default.gif`);
     const cardRef = useRef(null);
 
@@ -20,7 +20,7 @@ export default function ProjectCard({ project }) {
                     }
                 });
             },
-            { threshold: 0.1 }
+            {threshold: 0.1}
         );
 
         if (cardRef.current) {
@@ -47,12 +47,26 @@ export default function ProjectCard({ project }) {
                 {/* Title and image section */}
                 <div className="md:w-2/5 p-6 flex justify-center items-center">
                     <div className="group">
-                        <img
-                            src={image}
-                            alt={project.name}
-                            className="rounded-xl object-cover w-full h-auto shadow-xl transform group-hover:rotate-1 transition duration-500"
-                            onClick={openCarouselModal} // Ouvre la modal sur clic image
-                        />
+                        {image.toLowerCase().endsWith('.mp4') ? (
+                            <video
+                                src={image}
+                                alt={project.name}
+                                className="rounded-xl object-cover w-full h-auto shadow-xl transform group-hover:rotate-1 transition duration-500"
+                                autoPlay
+                                loop
+                                muted
+                                onClick={openCarouselModal} // Open carousel modal on click
+                            />
+                        ) : (
+                            <img
+                                src={image}
+                                alt={project.name}
+                                className="rounded-xl object-cover w-full h-auto shadow-xl transform group-hover:rotate-1 transition duration-500"
+                                onClick={openCarouselModal} // Open carousel modal on click
+                            />
+                        )
+                        }
+
                     </div>
                 </div>
                 <div className="md:w-3/5 p-8">
