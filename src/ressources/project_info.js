@@ -5,9 +5,9 @@ const project_info = [
         imageName: "ebullixir-home_run.mp4",
         images: ["ebullixir-success_elixir.mp4", "ebullixir-spider_and_client.mp4", "ebullixir-cut_watermelon.mp4", "ebullixir-recipie_and_client.mp4", "ebullixir-failed_elixir.mp4", "ebullixir-showup.mp4", "ebullixir-home_run.mp4"],
         short_desc: "Jeu vidéo VR de création de potions. Coupez, mélangez et faites bouillir des ingrédients pour créer des potions uniques.",
-        desc: "Développer ce jeu m'a véritablement donné le goût de la VR. Prendre en main le development kit VR de Unity a été un véritable plaisir, et j'ai adoré créer des interactions immersives pour le joueur.</br></br>" +
-            "Bien qu'ayant peu de temps pour développer ce jeu (prêt temporaire d'un casque VR par l'école), j'ai tout de même pris le temps de concevoir une base flexible et durable pour le système de recettes, qui est le cœur du jeu. </br></br>"+
-            "Quelques interfaces, quelques classes abstraites, un peu de réflexion sur l'architecture du code, et le tour est joué ! J'ai pu ainsi créer un système de recettes qui permet d'ajouter très facilement autant d'ingrédients, de potions et de recettes qu'on le veut.",
+        desc: "Développer ce jeu m'a véritablement donné le goût de la VR. Prendre en main le <strong>development kit VR</strong> de Unity a été un véritable plaisir, et j'ai adoré créer des interactions immersives pour le joueur.</br></br>" +
+            "Bien qu'ayant peu de temps pour développer ce jeu (prêt temporaire d'un casque VR par l'école), j'ai tout de même pris le temps de <strong>concevoir une base flexible</strong> et durable pour le système de recettes, qui est le cœur du jeu. </br></br>"+
+            "Quelques <strong>interfaces</strong>, quelques <strong>classes abstraites</strong>, un peu de réflexion sur l'<strong>architecture</strong> du code, et le tour est joué ! J'ai pu ainsi créer un système de recettes qui permet d'ajouter très facilement autant d'ingrédients, de potions et de recettes qu'on le veut.",
         links: [ {name: "Github repository", url: "https://github.com/YvanDesPatates/virtuality"} ],
         tags: ["Game", "VR", "Unity", "C#", "Architecture logicielle"],
     },
@@ -16,6 +16,9 @@ const project_info = [
         name: "Dog Jammer",
         imageName: "dachshund.gif",
         short_desc: "Jeu en multijoueur local où deux chiens s'affrontent en lançant un frisbee. <em class='underline'>Inspiré par WindJammers</em>",
+        desc: "Ce projet m'as surtout servi de pretexte pour développer une achritecture flexible permettant de gérer plusieurs manettes en même temps.</br></br>" +
+            "Plutôt que d’utiliser l’Input System de Unity, j’ai choisi de repartir de zéro afin d'apprendre un maximum grâce à ce projet. J’ai mis en place une solution personnalisée reposant sur des patrons de conception comme le <strong>Command Pattern</strong> et le <strong>Facade Pattern</strong>, en structurant le code autour d’<strong>interfaces</strong> claires et modulables. Maheureusement le jeu nécessite deux manettes pour être joué, ce qui limite son accessibilité.</br></br>" +
+            "Évidemment, j'ai également pris beaucoup de plaisir à créer une mimique de WindJammers, un jeu aussi dure que fun !",
         links: [
             {name: "Github repository", url: "https://github.com/YvanDesPatates/DogJammer"},
             {name: "Jouer en ligne", url: "https://play.unity.com/en/games/1d0f1500-1532-4d24-8816-1a854943e687/dogjammer"},
@@ -31,9 +34,9 @@ const project_info = [
         short_desc: "Jeu vidéo 3D où un teckel doit collecter des saucisses tout en évitant des obstacles. <em class='underline'>Inspiré par Poor Bunny</em>",
         desc: "Jeu vidéo <strong>développé de zéro, en solo en tant que projet personnel</strong>. J'ai voulu faire une version 3D du jeu Poor Bunny, en y intégrant en bonus ma passion pour les teckels !</br></br>" +
             "J'ai profité de ce projet pour me creuser un peu la tête sur le game design, car convertir un jeu 2D en 3D soulève beaucoup de questionnements. J'ai nottement eu à réfléchir sur le type d'obstacle qui serait assez lisible en 3D pour procurer de la difficulté sans être frustrant.</br></br>" +
-            "Ce projet m'as également confronté à quelques difficultées techniques intéressantes :</br>"+
+            "Ce projet m'as également confronté à quelques <strong>difficultées techniques</strong> intéressantes :</br>"+
             "<ul>"+
-            "<li>Un système qui met le jeu et tout ces composants à l'arrêt complet durant le game-over <em>( résolu grâce à un pattern observer classique, mais efficace )</em>.</li>" +
+            "<li>Un système qui met le jeu et tout ces composants à l'arrêt complet durant le game-over <em>( résolu grâce à un <strong>pattern observer</strong> classique, mais efficace )</em>.</li>" +
             "<li>La gestion des collisions à haute vitesse <em>( résolu en lisant la documentation de Unity)</em>.</li> </ul>",
         links: [
             {name: "Github repository", url: "https://github.com/YvanDesPatates/Poor_Sausage"},
@@ -48,11 +51,12 @@ const project_info = [
         imageName: "submarine-main.mp4",
         images: ["submarine-collecting_seaweed.mp4", "submarine-submarine_travel.mp4", "submarine-red_panda.mp4"],
         short_desc: "Jeu de survie en 2D pixel art réalisé en équipe à l'occasion d'une game jam.",
-        desc: "Participer à une Game Jam m'as permis de découvrir le travail en équipe dans le développement de jeux vidéo.</br></br>" +
+        desc: "Participer à une <strong>Game Jam</strong> m'as permis de découvrir le travail en équipe dans le développement de jeux vidéo.</br></br>" +
             "En moins de 48h on a réussi à créer un jeu de survie en 2D pixel art où le joueur doit survivre dans un sous-marin, en collectant des algues pour réalimenter le sous-marin en oxygène.</br></br>  " +
             "Assumant le rôle de Gameplay Developer, j'ai découvert les difficultés de la création d'un jeu en équipe, notamment la gestion des conflits, la répartition des tâches et la difficulté de maintenir une cohésion d'équipe entre des étudiants qui manquent de sommeil.",
         links: [
             {name: "Github repository", url: "https://github.com/YvanDesPatates/seaPanda"},
+            {name: "Jouer en ligne", url: "https://play.unity.com/en/games/0d507dc4-0d6a-4f7a-b523-0ac7a9d7acfb/sea-panda"},
         ],
         tags: ["Game Jam", "équipe", "Unity", "survie", "2D"],
 
@@ -67,10 +71,10 @@ const project_info = [
             "J'ai parfois ajouté ma touche personnelle à ces projets, malheureusement j'ai perdu la plupart de ces projets... on ne répétera jamais assez l'importance du verisonning !</br></br>" +
             "J'ai tout de même gardé quelques projets, que je vous invite à découvrir ci-dessous. Ils sont tous réalisés en Unity et C# avec beaucoup d'amour et de passion.",
         links: [
-            {name: "jouer au tuto 1", url: "https://play.unity.com/en/games/0bd6b791-308a-4bbc-b5db-bdfb947f74c0/tuto1-feedanimals"},
-            {name: "jouer au tuto 2", url: "https://play.unity.com/en/games/eeb7493c-2bc2-4e19-8c59-ba50265cfb2f/tuto2-madrunner"},
             {name: "repository tuto 1", url: "https://github.com/YvanDesPatates/unity_course_prototype_1"},
             {name: "repository tuto 2", url: "https://github.com/YvanDesPatates/unity_course_prototype_2"},
+            {name: "jouer au tuto 1", url: "https://play.unity.com/en/games/0bd6b791-308a-4bbc-b5db-bdfb947f74c0/tuto1-feedanimals"},
+            {name: "jouer au tuto 2", url: "https://play.unity.com/en/games/eeb7493c-2bc2-4e19-8c59-ba50265cfb2f/tuto2-madrunner"},
         ],
         tags: ["tutoriels", "Unity", "C#", "3D"],
     },
@@ -79,12 +83,13 @@ const project_info = [
         name: "Bataille Navale",
         imageName: "BN-game.png",
         images: ["BN-ship_placement.mp4", "BN-wrong_ship_placement.mp4", "BN-shooting_ship.mp4", "BN-explanations.png", "BN-game.png"],
-        short_desc: "Premier projet personnel : un jeu de bataille navale simpliste sur navigateur. Jeu en couch coop où il faut se passer l'ordinateur pour jouer (oui c'est étrange, c'est mon premier projet pou rappel).",
-        desc: "Après moins de 4 mois en formation de développeur, j'ai décidé de me lancer dans mon premier projet personnel. Alors que mes compétences se limitent à HTML, CSS et des bases en Java et Javascript, je me suis lancé le défi de réaliser un jeu vidéo. Partant des quelques projets de sites webs et d'algos Java développés en cours, j'ai créé un jeu de bataille navale simpliste, mais fonctionnel !",
+        short_desc: "<strong>Premier projet personnel</strong> : un jeu de bataille navale simpliste sur navigateur. Jeu en couch coop où il faut se passer l'ordinateur pour jouer (oui c'est étrange, c'est mon premier projet pou rappel).",
+        desc: "Après moins de <strong>4 mois en formation de développeur</strong>, j'ai décidé de me lancer dans mon premier projet personnel.</br></br>"+
+            " Alors que mes compétences se limitent à HTML, CSS et des bases en Java et Javascript, je me suis lancé le défi de réaliser un jeu vidéo. Partant des quelques projets de sites webs et d'algos Java développés en cours, j'ai créé un jeu de bataille navale simpliste, mais fonctionnel !",
         links: [
-            {name: "Jouer en ligne", url: "https://yvandespatates.github.io/BatailleNavale/"},
             {name: "Github repository", url: "https://github.com/YvanDesPatates/BatailleNavale"},
-            ],
+            {name: "Jouer en ligne", url: "https://yvandespatates.github.io/BatailleNavale/"},
+        ],
         tags: ["Game", "Javascript", "HTML", "CSS", "Web", "premier projet"],
     },
     {
