@@ -45,7 +45,8 @@ const project_info = [
     {
         key: "submarine",
         name: "Submarine",
-        imageName: "dachshund.gif",
+        imageName: "submarine-main.mp4",
+        images: ["submarine-collecting_seaweed.mp4", "submarine-submarine_travel.mp4", "submarine-red_panda.mp4"],
         short_desc: "Jeu de survie en 2D pixel art réalisé en équipe à l'occasion d'une game jam.",
         desc: "Participer à une Game Jam m'as permis de découvrir le travail en équipe dans le développement de jeux vidéo.</br></br>" +
             "En moins de 48h on a réussi à créer un jeu de survie en 2D pixel art où le joueur doit survivre dans un sous-marin, en collectant des algues pour réalimenter le sous-marin en oxygène.</br></br>  " +
