@@ -50,7 +50,6 @@ export default function ProjectCard({project}) {
                         {image.toLowerCase().endsWith('.mp4') ? (
                             <video
                                 src={image}
-                                alt={project.name}
                                 className="rounded-xl object-cover w-full h-auto shadow-xl transform group-hover:rotate-1 transition duration-500"
                                 autoPlay
                                 loop
@@ -118,7 +117,7 @@ export default function ProjectCard({project}) {
                             className="open-carousel-modal-button link"
                             onClick={openCarouselModal}
                         >
-                            See more images
+                            Voir toutes les images
                         </button>
                     ) : null}
 

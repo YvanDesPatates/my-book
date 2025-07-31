@@ -47,4 +47,6 @@ li {
 
 .open-carousel-modal-button {
     padding: 0.30rem 5rem;
+    background-color: #7F00FF;
+    color: white;
 }
