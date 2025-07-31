@@ -9,6 +9,18 @@ export default function CarouselModal({ images, isOpen, onClose }) {
     const touchStartX = useRef(null);
     const touchEndX = useRef(null);
 
+    // Ajout gestion touche échappe
+    useEffect(() => {
+        if (!isOpen) return;
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                onClose();
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [isOpen, onClose]);
+
     useEffect(() => {
         setCurrentIndex(0);
     }, [isOpen]);
