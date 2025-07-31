@@ -113,14 +113,34 @@ const project_info = [
     {
         key: "opensilex",
         name: "OpenSilex",
-        imageName: "dachshund.gif",
+        imageName: "opensilex_logo.png",
+        images: ["opensilex_connexion.png", "opensilex_accounts.png"],
         short_desc: "Application web de gestion de données de recherches à gros volumes. Projet Open Source porté par les valeurs de l'Open Science et du Web Sémantique.",
+        desc: "J'ai eu la chance de travailler pour OpenSILEX durant <strong>3 ans en tant que développeur</strong>. J'y ai appris à développer des applications web complexes, à faire de la veille technologique et à travailler en équipe.</br></br>" +
+            "OpenSILEX est une application web de gestion de données de recherches à gros volumes, développée en Java et VueJS. Elle est utilisée par des laboratoires de recherche en agronomie pour gérer leurs données et leurs projets.</br></br>" +
+            "Cette expérience a été très riche en apprentissages, aussi bien humains que techniques. Ce fut l'occasion d'intégrer un vrai worklfow SCRUM dans une équipe d'une dizaine de personnes, de travailler sur des problématiques de gestion de données complexes et d'apprendre à utiliser de nouvelles technologies.</br>Intégrer un projet de grande empleur ma permis de maitriser les sujets importants que sont la documentation et la dette technique.</br></br>" +
+            "J'ai eu l'occasion, durant nos réunions techniques, de prendre par à des décisions importantes concernant l'architecture logicielle de l'application. J'ai notamment fait par d'un problème dans l'architecture en couche empêchant la factorisation de code, et ai proposé une solution qui a été acceptée et mise en place. Ce fut extrêmement gratifiant de pouvoir contribuer à la maintenabilité du logiciel, et ainsi d'aider toute l'équipe dans son travail.",
         links: [
             {name: "Site officiel", url: "http://www.opensilex.org/"},
             {name: "Github repository", url: "https://github.com/OpenSILEX/opensilex"},
         ],
-        tags: ["Java", "Architecture logicielle", "3 ans d'expériences", "VueJS",]
+        tags: ["Java", "MongoDB", "SPARQL", "VueJS", "Architecture logicielle"]
     },
+    {
+        key: "patterns_students_projects",
+        name: "Projets étudiants | comprendre l'architecture logicielle",
+        imageName: "patterns_students_projects.png",
+        short_desc: "",
+        desc: "Durant mes études, j'ai eu plusieurs projets étudiants, sous formes d'exercices, qui m'ont permis de comprendre l'importance d'une architecture logicielle solide et maintenable.</br></br>" +
+            "Ces projets m'ont appris à utiliser des design patterns, à mettre en oeuvre une architecture en couches et à comprendre les principes d'architecture logicielle (SOLID, GRASP, KISS).</br></br>" +
+            "C'est grâce à ces bases solides que j'ai pu continuer à développer mes compétences en architecture logicielle au quotidien, dans mes projets personnels et professionnels.",
+        links: [
+            {name: "projet patterns", url: "https://github.com/YvanDesPatates/coffre-chateau-patterns"},
+            {name: "projet architecture en couche", url: "https://github.com/YvanDesPatates/projetStocks"},
+            {name: "projet command pattern", url: "https://github.com/YvanDesPatates/patternCommand"},
+        ],
+    }
+
 
 ];
 
