@@ -9,24 +9,27 @@ export default function Footer() {
 
     // true if the current page is the home page
     const isHomePage = location.pathname === '/';
+    const smallScreen = window.innerWidth < 768;
 
     return (
-        <footer className="py-6 px-4">
-            <div
-                className="max-w-7xl mx-auto flex justify-between items-center flex-col-reverse md:flex-row">
-                {/* Logo to homepage*/}
-                <div className="mb-4 md:mb-0">
-                    <img
-                        src={logo}
-                        alt="Logo"
-                        className="logo simple-hover-animation"
-                        onClick={() => handleNavigate('/')}
-                        style={{cursor: 'pointer'}}
-                    />
-                </div>
+        <footer className="fixed bottom-0 left-0 w-full z-50 bg-white bg-opacity-90 py-2">
+            <div className="max-w-7xl mx-auto flex justify-between items-center flex-col-reverse md:flex-row">
+                {/* Logo to homepage only on desktop*/}
+                { smallScreen && !isHomePage ? null : (
+                    <div className="mb-4 md:mb-0">
+                        <img
+                            src={logo}
+                            alt="Logo"
+                            className="logo simple-hover-animation"
+                            onClick={() => handleNavigate('/')}
+                            style={{cursor: 'pointer'}}
+                        />
+                    </div>
+                )}
 
                 {/* skill orbs and social media icons*/}
-                <div className="flex items-center w-3/5 justify-between flex-col md:flex-row md:space-x-6">
+                <div
+                    className={`flex items-center justify-between flex-col md:flex-row md:space-x-6${!isHomePage ? ' w-3/5' : ''}`}>
                     {!isHomePage && (
                         <div className="flex justify-center space-x-4 mb-4 md:mb-0">
                             <SkillOrb

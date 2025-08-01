@@ -40,7 +40,7 @@ export default function Header() {
                     <button className="md:hidden text-sky-700" onClick={() => setMenuOpen(!menuOpen)}>
                         <i className="fas fa-bars text-2xl"></i>
                         {menuOpen && (
-                            <div className="absolute top-12 right-0 bg-white shadow-lg rounded-lg p-4 space-y-4">
+                            <div className="absolute top-12 right-0 bg-white shadow-lg rounded-lg p-4 space-y-4 z-50">
                                 <a href="tel:0662116016"
                                    className="flex items-center space-x-2 text-gray-600 font-medium hover:text-sky-700 transition">
                                     <i className="fas fa-phone-alt"></i>
