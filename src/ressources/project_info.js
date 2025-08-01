@@ -14,7 +14,7 @@ const project_info = [
     {
         key: "dogjammmer",
         name: "Dog Jammer",
-        imageName: "dachshund.gif",
+        imageName: "dogjammer.mp4",
         short_desc: "Jeu en multijoueur local où deux chiens s'affrontent en lançant un frisbee. <em class='underline'>Inspiré par WindJammers</em>",
         desc: "Ce projet m'as surtout servi de pretexte pour développer une achritecture flexible permettant de gérer plusieurs manettes en même temps.</br></br>" +
             "Plutôt que d’utiliser l’Input System de Unity, j’ai choisi de repartir de zéro afin d'apprendre un maximum grâce à ce projet. J’ai mis en place une solution personnalisée reposant sur des patrons de conception comme le <strong>Command Pattern</strong> et le <strong>Facade Pattern</strong>, en structurant le code autour d’<strong>interfaces</strong> claires et modulables. Maheureusement le jeu nécessite deux manettes pour être joué, ce qui limite son accessibilité.</br></br>" +
