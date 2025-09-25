@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-book/static/css/main.0f4029f9.css",
-    "main.js": "/my-book/static/js/main.1b39173a.js",
+    "main.js": "/my-book/static/js/main.285e44fa.js",
     "static/media/ebullixir-spider_and_client.mp4": "/my-book/static/media/ebullixir-spider_and_client.422d4ea85af2175fb7e8.mp4",
     "static/media/dachshund2.gif": "/my-book/static/media/dachshund2.f0e219d44341460d6363.gif",
     "static/media/ebullixir-failed_elixir.mp4": "/my-book/static/media/ebullixir-failed_elixir.0ee4e0e6a4408407fa79.mp4",
@@ -16,6 +16,7 @@
     "static/media/patternrun-double_jump.mp4": "/my-book/static/media/patternrun-double_jump.4c2750edcf23bf6e4a49.mp4",
     "static/media/tuto2.mp4": "/my-book/static/media/tuto2.f154269e91c7741b4749.mp4",
     "static/media/BN-ship_placement.mp4": "/my-book/static/media/BN-ship_placement.e8cf95f0872ba793df37.mp4",
+    "static/media/personaljsframework.png": "/my-book/static/media/personaljsframework.30d3ce9c255398a9fbae.png",
     "static/media/patternrun-beginning.mp4": "/my-book/static/media/patternrun-beginning.b232df4b6170dc3e4cbd.mp4",
     "static/media/BN-shooting_ship.mp4": "/my-book/static/media/BN-shooting_ship.ed0dd6304c3731eb8792.mp4",
     "static/media/BN-wrong_ship_placement.mp4": "/my-book/static/media/BN-wrong_ship_placement.63b63d89890bf82a5427.mp4",
@@ -37,6 +38,7 @@
     "static/media/poorsausage-bullet.mp4": "/my-book/static/media/poorsausage-bullet.6fd2d11e9feda4698c32.mp4",
     "static/media/submarine-red_panda.mp4": "/my-book/static/media/submarine-red_panda.209462b3fddd3987e71b.mp4",
     "static/media/dogjammer.mp4": "/my-book/static/media/dogjammer.012b52d0627d57b15e35.mp4",
+    "static/media/patternrun-jetpack.png": "/my-book/static/media/patternrun-jetpack.b9380e8abc6ae740de76.png",
     "static/media/patternrun-movement_strategy.png": "/my-book/static/media/patternrun-movement_strategy.7eea279ed720136c3b3f.png",
     "static/media/opensilex_logo.png": "/my-book/static/media/opensilex_logo.289cf5bff2af3ad349a4.png",
     "static/media/poorsausage-menu.mp4": "/my-book/static/media/poorsausage-menu.4de00d45d7690abf6410.mp4",
@@ -44,10 +46,10 @@
     "static/media/BN-explanations.png": "/my-book/static/media/BN-explanations.0a72a6bfd0318bd5af3d.png",
     "index.html": "/my-book/index.html",
     "main.0f4029f9.css.map": "/my-book/static/css/main.0f4029f9.css.map",
-    "main.1b39173a.js.map": "/my-book/static/js/main.1b39173a.js.map"
+    "main.285e44fa.js.map": "/my-book/static/js/main.285e44fa.js.map"
   },
   "entrypoints": [
     "static/css/main.0f4029f9.css",
-    "static/js/main.1b39173a.js"
+    "static/js/main.285e44fa.js"
   ]
 }
