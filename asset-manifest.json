@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-book/static/css/main.81728131.css",
-    "main.js": "/my-book/static/js/main.40f7706b.js",
+    "main.css": "/my-book/static/css/main.8c5f06ed.css",
+    "main.js": "/my-book/static/js/main.3f5e5caa.js",
     "static/media/ebullixir-spider_and_client.mp4": "/my-book/static/media/ebullixir-spider_and_client.422d4ea85af2175fb7e8.mp4",
     "static/media/dachshund2.gif": "/my-book/static/media/dachshund2.f0e219d44341460d6363.gif",
     "static/media/ebullixir-failed_elixir.mp4": "/my-book/static/media/ebullixir-failed_elixir.0ee4e0e6a4408407fa79.mp4",
@@ -13,19 +13,21 @@
     "static/media/poorsausage-demo.mp4": "/my-book/static/media/poorsausage-demo.1c358c8f98f10ad48bed.mp4",
     "static/media/ebullixir-home_run.mp4": "/my-book/static/media/ebullixir-home_run.d753973906f63999be0f.mp4",
     "static/media/ebullixir-showup.mp4": "/my-book/static/media/ebullixir-showup.c7db9e313e21426aafa3.mp4",
-    "static/media/tuto2.png": "/my-book/static/media/tuto2.e45303fbb65d8fec76be.png",
+    "static/media/patternrun-double_jump.mp4": "/my-book/static/media/patternrun-double_jump.4c2750edcf23bf6e4a49.mp4",
     "static/media/tuto2.mp4": "/my-book/static/media/tuto2.f154269e91c7741b4749.mp4",
     "static/media/BN-ship_placement.mp4": "/my-book/static/media/BN-ship_placement.e8cf95f0872ba793df37.mp4",
-    "static/media/patterns_students_projects.png": "/my-book/static/media/patterns_students_projects.3f8e848995b0e820da21.png",
+    "static/media/patternrun-beginning.mp4": "/my-book/static/media/patternrun-beginning.b232df4b6170dc3e4cbd.mp4",
     "static/media/BN-shooting_ship.mp4": "/my-book/static/media/BN-shooting_ship.ed0dd6304c3731eb8792.mp4",
     "static/media/BN-wrong_ship_placement.mp4": "/my-book/static/media/BN-wrong_ship_placement.63b63d89890bf82a5427.mp4",
     "static/media/pixel_Y.png": "/my-book/static/media/pixel_Y.e9202766f2c93b4c18db.png",
     "static/media/tuto1.png": "/my-book/static/media/tuto1.1c271ff3dd768970a006.png",
     "static/media/poorsausage-laser.mp4": "/my-book/static/media/poorsausage-laser.4052a7b941f166ae3d65.mp4",
+    "static/media/tuto2.png": "/my-book/static/media/tuto2.f4338c0a454993c1ff7c.png",
     "static/media/dachshund.gif": "/my-book/static/media/dachshund.55688a82fc60afac26ab.gif",
     "static/media/default.gif": "/my-book/static/media/default.55688a82fc60afac26ab.gif",
     "static/media/poorsausage.mp4": "/my-book/static/media/poorsausage.d30d42f06cd7586cd15a.mp4",
     "static/media/dachsundLogo.png": "/my-book/static/media/dachsundLogo.df11d4c36d71d4806c83.png",
+    "static/media/patterns_students_projects.png": "/my-book/static/media/patterns_students_projects.f44739eaf89c45efa58e.png",
     "static/media/submarine-collecting_seaweed.mp4": "/my-book/static/media/submarine-collecting_seaweed.668781a43f2dcd808658.mp4",
     "static/media/BN-game.png": "/my-book/static/media/BN-game.a97d1a8e5fd5796fdba8.png",
     "static/media/opensilex_accounts.png": "/my-book/static/media/opensilex_accounts.989b03070e0b79cdc48a.png",
@@ -34,15 +36,18 @@
     "static/media/tuto1.mp4": "/my-book/static/media/tuto1.a8d21ba7bd1c192d1190.mp4",
     "static/media/poorsausage-bullet.mp4": "/my-book/static/media/poorsausage-bullet.6fd2d11e9feda4698c32.mp4",
     "static/media/submarine-red_panda.mp4": "/my-book/static/media/submarine-red_panda.209462b3fddd3987e71b.mp4",
+    "static/media/dogjammer.mp4": "/my-book/static/media/dogjammer.012b52d0627d57b15e35.mp4",
+    "static/media/patternrun-movement_strategy.png": "/my-book/static/media/patternrun-movement_strategy.7eea279ed720136c3b3f.png",
     "static/media/opensilex_logo.png": "/my-book/static/media/opensilex_logo.289cf5bff2af3ad349a4.png",
     "static/media/poorsausage-menu.mp4": "/my-book/static/media/poorsausage-menu.4de00d45d7690abf6410.mp4",
+    "static/media/patternrun-gameover.png": "/my-book/static/media/patternrun-gameover.e88f0ca0b6990aa5335a.png",
     "static/media/BN-explanations.png": "/my-book/static/media/BN-explanations.0a72a6bfd0318bd5af3d.png",
     "index.html": "/my-book/index.html",
-    "main.81728131.css.map": "/my-book/static/css/main.81728131.css.map",
-    "main.40f7706b.js.map": "/my-book/static/js/main.40f7706b.js.map"
+    "main.8c5f06ed.css.map": "/my-book/static/css/main.8c5f06ed.css.map",
+    "main.3f5e5caa.js.map": "/my-book/static/js/main.3f5e5caa.js.map"
   },
   "entrypoints": [
-    "static/css/main.81728131.css",
-    "static/js/main.40f7706b.js"
+    "static/css/main.8c5f06ed.css",
+    "static/js/main.3f5e5caa.js"
   ]
 }
