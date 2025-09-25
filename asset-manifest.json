@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-book/static/css/main.8c5f06ed.css",
-    "main.js": "/my-book/static/js/main.3f5e5caa.js",
+    "main.css": "/my-book/static/css/main.0f4029f9.css",
+    "main.js": "/my-book/static/js/main.1b39173a.js",
     "static/media/ebullixir-spider_and_client.mp4": "/my-book/static/media/ebullixir-spider_and_client.422d4ea85af2175fb7e8.mp4",
     "static/media/dachshund2.gif": "/my-book/static/media/dachshund2.f0e219d44341460d6363.gif",
     "static/media/ebullixir-failed_elixir.mp4": "/my-book/static/media/ebullixir-failed_elixir.0ee4e0e6a4408407fa79.mp4",
@@ -43,11 +43,11 @@
     "static/media/patternrun-gameover.png": "/my-book/static/media/patternrun-gameover.e88f0ca0b6990aa5335a.png",
     "static/media/BN-explanations.png": "/my-book/static/media/BN-explanations.0a72a6bfd0318bd5af3d.png",
     "index.html": "/my-book/index.html",
-    "main.8c5f06ed.css.map": "/my-book/static/css/main.8c5f06ed.css.map",
-    "main.3f5e5caa.js.map": "/my-book/static/js/main.3f5e5caa.js.map"
+    "main.0f4029f9.css.map": "/my-book/static/css/main.0f4029f9.css.map",
+    "main.1b39173a.js.map": "/my-book/static/js/main.1b39173a.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c5f06ed.css",
-    "static/js/main.3f5e5caa.js"
+    "static/css/main.0f4029f9.css",
+    "static/js/main.1b39173a.js"
   ]
 }
