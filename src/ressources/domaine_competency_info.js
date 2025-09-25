@@ -7,7 +7,7 @@ const domaine_competency = [
     },
     {
         key: "Architecture-logiciel",
-        description: "L'architecture logicielle est un domaine qui me passionne particulièrement. J'ai eu l'occasion de travailler sur des projets complexes, notamment durant mes près de <strong>4 années en tant que développeur</strong> pour <a style='color: #7F00FF' href='http://www.opensilex.org/'>OpenSILEX</a>, où la conception et la structuration du code étaient essentielles pour garantir la maintenabilité et l'évolutivité des applications. Appliquer les principes SOLID dans mes projets professionels, personnels et étudiant, entre autres grâce à l'utilisation de design patterns, m'a permis de grandement m'améliorer en architecture logicielle.",
+        description: "L'architecture logicielle est un domaine qui me passionne particulièrement. J'ai eu l'occasion de travailler sur des projets complexes, notamment durant mes près de <strong>4 années en tant que développeur</strong> pour <a target='_blank' rel='noopener noreferrer' style='color: #7F00FF' href='http://www.opensilex.org/'>OpenSILEX</a>, où la conception et la structuration du code étaient essentielles pour garantir la maintenabilité et l'évolutivité des applications. Appliquer les principes SOLID dans mes projets professionels, personnels et étudiant, entre autres grâce à l'utilisation de design patterns, m'a permis de grandement m'améliorer en architecture logicielle.",
         projects_keys: ["patternrun", "opensilex", "personaljsframework", "patterns_students_projects", "dogjammmer", "poorsausage",]
     },
     {
@@ -24,6 +24,7 @@ const domaine_competency = [
     },
     {
         key: "Blender",
+        description: "⚠️ Work in progress ⚠️</br> Bientôt des images des modèles 3D seront disponibles </br></br>Plus un passe temps qu'une compétence professionnelle, la modélisation 3D et l'animation avec Blender est une activité que j'apprécie particulièrement. Complémentaire avec ma passion pour le développement de jeux vidéo, j'utilise Blender pour créer des assets 3D que j'intègre ensuite dans mes projets.",
         projects_keys: [""]
     },
 

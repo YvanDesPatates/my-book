@@ -105,7 +105,7 @@ const project_info = [
     {
         key: "personaljsframework",
         name: "Framework JS maison",
-        imageName: "dachshund.gif",
+        imageName: "personaljsframework.png",
         short_desc: "Les débuts d'un framework JS fait maison, permettant de créer des API Typescript plus simples et organisées.",
         desc: "Le but de ce framework était de mieux comprendre les différents frameworks que j'utilise, mais aussi de mettre en pratique les concepts d'architecture logicielle que j'ai appris.</br></br>" +
             "Ce projet a été très intéressant. J'y ai beaucoup appris sur la <strong>généricité</strong> et les <strong> classes paramétrées</strong>.</br></br> " +
@@ -134,7 +134,7 @@ const project_info = [
     {
         key: "patternrun",
         name: "Pattern Run",
-        imageName: "",
+        imageName: "patternrun-jetpack.png",
         images: ["patternrun-movement_strategy.png", "patternrun-beginning.mp4", "patternrun-double_jump.mp4", "patternrun-gameover.png"],
         short_desc: "Création d'un cours sur l'architecture logicielle en C# mêlant théorie et mise en pratique de patterns.",
         desc: "Mon ancienne école a souhaité que je crée un cours sur l'architecture logicielle. J'ai créé un TP d'une demi-journée servant d'introduction à l'architecture logicielle et aux designs patterns.</br></br>"+
