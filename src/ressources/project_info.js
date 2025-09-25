@@ -107,8 +107,11 @@ const project_info = [
         name: "Framework JS maison",
         imageName: "dachshund.gif",
         short_desc: "Les débuts d'un framework JS fait maison, permettant de créer des API Typescript plus simples et organisées.",
+        desc: "Le but de ce framework était de mieux comprendre les différents frameworks que j'utilise, mais aussi de mettre en pratique les concepts d'architecture logicielle que j'ai appris.</br></br>" +
+            "Ce projet a été très intéressant. J'y ai beaucoup appris sur la <strong>généricité</strong> et les <strong> classes paramétrées</strong>.</br></br> " +
+            "Evidemment, il est loin d'un framework complet, crée par une équipe de développeurs plus qu'aguerris, et il manque cruellement de documentation. Mais j'ai tout de même pu implémenter ce mini-framework, avec succès, dans plusieurs projets étudiants. Ce projet est véritablement opérationnel pour des projets de petite envergure style prototype.",
         links: [{name: "Github repository", url: "https://github.com/YvanDesPatates/ts_api_template"}],
-        tags: ["Framework", "Typescript", "Design Patterns", "Généricité paramétrique", "Typescript"]
+        tags: ["Framework", "Typescript", "Design Patterns", "Généricité", "Typescript"]
     },
     {
         key: "opensilex",
@@ -116,15 +119,31 @@ const project_info = [
         imageName: "opensilex_logo.png",
         images: ["opensilex_connexion.png", "opensilex_accounts.png"],
         short_desc: "Application web de gestion de données de recherches à gros volumes. Projet Open Source porté par les valeurs de l'Open Science et du Web Sémantique.",
-        desc: "J'ai eu la chance de travailler pour OpenSILEX durant <strong>3 ans en tant que développeur</strong>. J'y ai appris à développer des applications web complexes, à faire de la veille technologique et à travailler en équipe.</br></br>" +
+        desc: "J'ai eu la chance de travailler pour OpenSILEX durant près de <strong>4 ans en tant que développeur full-stack</strong>. J'y ai appris à développer des applications web complexes, à faire de la veille technologique et à travailler en équipe.</br></br>" +
             "OpenSILEX est une application web de gestion de données de recherches à gros volumes, développée en Java et VueJS. Elle est utilisée par des laboratoires de recherche en agronomie pour gérer leurs données et leurs projets.</br></br>" +
+            "<p class='desc-subtitle'>Une expérience enrichissante</p>" +
             "Cette expérience a été très riche en apprentissages, aussi bien humains que techniques. Ce fut l'occasion d'intégrer un vrai worklfow SCRUM dans une équipe d'une dizaine de personnes, de travailler sur des problématiques de gestion de données complexes et d'apprendre à utiliser de nouvelles technologies.</br>Intégrer un projet de grande empleur ma permis de maitriser les sujets importants que sont la documentation et la dette technique.</br></br>" +
-            "J'ai eu l'occasion, durant nos réunions techniques, de prendre par à des décisions importantes concernant l'architecture logicielle de l'application. J'ai notamment fait par d'un problème dans l'architecture en couche empêchant la factorisation de code, et ai proposé une solution qui a été acceptée et mise en place. Ce fut extrêmement gratifiant de pouvoir contribuer à la maintenabilité du logiciel, et ainsi d'aider toute l'équipe dans son travail.",
+            "<p class='desc-subtitle'>Architecture logicielle</p>" +
+            "J'ai eu l'occasion, durant nos réunions techniques, de prendre part à des décisions importantes concernant l'architecture logicielle de l'application. J'ai notamment fait part d'un problème dans l'architecture en couche empêchant la factorisation de code, et ai proposé une solution qui a été acceptée et mise en place. Ce fut extrêmement gratifiant de pouvoir contribuer à la maintenabilité du logiciel, et ainsi d'aider toute l'équipe dans son travail.",
         links: [
             {name: "Site officiel", url: "http://www.opensilex.org/"},
             {name: "Github repository", url: "https://github.com/OpenSILEX/opensilex"},
         ],
         tags: ["Java", "MongoDB", "SPARQL", "VueJS", "Architecture logicielle"]
+    },
+    {
+        key: "patternrun",
+        name: "Pattern Run",
+        imageName: "",
+        images: ["patternrun-movement_strategy.png", "patternrun-beginning.mp4", "patternrun-double_jump.mp4", "patternrun-gameover.png"],
+        short_desc: "Création d'un cours sur l'architecture logicielle en C# mêlant théorie et mise en pratique de patterns.",
+        desc: "Mon ancienne école a souhaité que je crée un cours sur l'architecture logicielle. J'ai créé un TP d'une demi-journée servant d'introduction à l'architecture logicielle et aux designs patterns.</br></br>"+
+            "Ce TP prends la forme d'un jeu vidéo où nous codons ensemble certaines fonctionnalités manquantes. Le choix de faire un jeu est motivé par ma passion, mais aussi car c'est un environnement vivant et complexe dans lequel les patterns sont très utiles, presque évidents. Cela permet également de rendre l'apprentissage beaucoup plus ludique.</br></br>",
+        links: [
+            {name: "Github repository", url: "https://github.com/YvanDesPatates/pattern_run"},
+            {name: "Jouer en ligne", url: "https://play.unity.com/en/games/0784f5cf-534d-4d46-9c56-30ed911999a8/pattern-run"},
+        ],
+        tags: ["Architecture logicielle", "Design Patterns", "C#", "Unity"]
     },
     {
         key: "patterns_students_projects",

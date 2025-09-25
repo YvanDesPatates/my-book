@@ -50,3 +50,8 @@ li {
     background-color: #7F00FF;
     color: white;
 }
+
+.desc-subtitle{
+    font-style: italic;
+    text-decoration: underline;
+}
