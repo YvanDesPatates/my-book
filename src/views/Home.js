@@ -38,18 +38,18 @@ export default function Home() {
                         floatingClass="skill-orb-games"
                     />
                     <SkillOrb
-                        iconClass="fas fa-mobile-alt"
-                        gradientClass="bg-gradient-to-br from-purple-100 to-purple-200"
-                        colorClass="text-purple-600"
-                        link={get_domaine_url('Web-Developer')}
-                        floatingClass="skill-orb-apps"
-                    />
-                    <SkillOrb
                         iconClass="fas fa-code-branch"
                         gradientClass="bg-gradient-to-br from-green-100 to-green-200"
                         colorClass="text-green-600"
                         link={get_domaine_url('Architecture-logiciel')}
                         floatingClass="skill-orb-architecture"
+                    />
+                    <SkillOrb
+                        iconClass="fas fa-mobile-alt"
+                        gradientClass="bg-gradient-to-br from-purple-100 to-purple-200"
+                        colorClass="text-purple-600"
+                        link={get_domaine_url('Web-Developer')}
+                        floatingClass="skill-orb-apps"
                     />
                     <SkillOrb
                         iconClass="fas fa-brain"
@@ -79,19 +79,19 @@ export default function Home() {
                     </p>
                     <p
                         className="skill-tag bg-white/80 backdrop-blur-sm rounded-full py-2 px-4 text-sm font-medium text-gray-700 hover:bg-white transition flex items-center justify-center space-x-2"
-                        onClick={() => navigate(get_domaine_url('Web-Developer'))}
-                        style={{cursor: 'pointer'}}
-                    >
-                        <i className="fas fa-mobile-alt text-purple-500"></i>
-                        <span>Applications</span>
-                    </p>
-                    <p
-                        className="skill-tag bg-white/80 backdrop-blur-sm rounded-full py-2 px-4 text-sm font-medium text-gray-700 hover:bg-white transition flex items-center justify-center space-x-2"
                         onClick={() => navigate(get_domaine_url('Architecture-logiciel'))}
                         style={{cursor: 'pointer'}}
                     >
                         <i className="fas fa-code-branch text-green-500"></i>
                         <span>Architecture</span>
+                    </p>
+                    <p
+                        className="skill-tag bg-white/80 backdrop-blur-sm rounded-full py-2 px-4 text-sm font-medium text-gray-700 hover:bg-white transition flex items-center justify-center space-x-2"
+                        onClick={() => navigate(get_domaine_url('Web-Developer'))}
+                        style={{cursor: 'pointer'}}
+                    >
+                        <i className="fas fa-mobile-alt text-purple-500"></i>
+                        <span>Applications</span>
                     </p>
                     <p
                         className="skill-tag bg-white/80 backdrop-blur-sm rounded-full py-2 px-4 text-sm font-medium text-gray-700 hover:bg-white transition flex items-center justify-center space-x-2"

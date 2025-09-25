@@ -39,16 +39,16 @@ export default function Footer() {
                                 link="/domaine_de_competence/Game-Developer"
                             />
                             <SkillOrb
-                                iconClass="fas fa-mobile-alt"
-                                gradientClass="bg-gradient-to-br from-purple-100 to-purple-200"
-                                colorClass="text-purple-600"
-                                link="/domaine_de_competence/Web-Developer"
-                            />
-                            <SkillOrb
                                 iconClass="fas fa-code-branch"
                                 gradientClass="bg-gradient-to-br from-green-100 to-green-200"
                                 colorClass="text-green-600"
                                 link="/domaine_de_competence/Architecture-logiciel"
+                            />
+                            <SkillOrb
+                                iconClass="fas fa-mobile-alt"
+                                gradientClass="bg-gradient-to-br from-purple-100 to-purple-200"
+                                colorClass="text-purple-600"
+                                link="/domaine_de_competence/Web-Developer"
                             />
                             <SkillOrb
                                 iconClass="fas fa-brain"
