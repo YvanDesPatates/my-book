@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-book/static/css/main.0f4029f9.css",
-    "main.js": "/my-book/static/js/main.285e44fa.js",
+    "main.js": "/my-book/static/js/main.36ae4952.js",
     "static/media/ebullixir-spider_and_client.mp4": "/my-book/static/media/ebullixir-spider_and_client.422d4ea85af2175fb7e8.mp4",
     "static/media/dachshund2.gif": "/my-book/static/media/dachshund2.f0e219d44341460d6363.gif",
     "static/media/ebullixir-failed_elixir.mp4": "/my-book/static/media/ebullixir-failed_elixir.0ee4e0e6a4408407fa79.mp4",
@@ -22,7 +22,9 @@
     "static/media/BN-wrong_ship_placement.mp4": "/my-book/static/media/BN-wrong_ship_placement.63b63d89890bf82a5427.mp4",
     "static/media/pixel_Y.png": "/my-book/static/media/pixel_Y.e9202766f2c93b4c18db.png",
     "static/media/tuto1.png": "/my-book/static/media/tuto1.1c271ff3dd768970a006.png",
+    "static/media/whatsinpic-daschund-and-bike.mp4": "/my-book/static/media/whatsinpic-daschund-and-bike.61c7de47b6221724c98e.mp4",
     "static/media/poorsausage-laser.mp4": "/my-book/static/media/poorsausage-laser.4052a7b941f166ae3d65.mp4",
+    "static/media/whatsinpic-lynx.mp4": "/my-book/static/media/whatsinpic-lynx.592fff741e71554a862e.mp4",
     "static/media/tuto2.png": "/my-book/static/media/tuto2.f4338c0a454993c1ff7c.png",
     "static/media/dachshund.gif": "/my-book/static/media/dachshund.55688a82fc60afac26ab.gif",
     "static/media/default.gif": "/my-book/static/media/default.55688a82fc60afac26ab.gif",
@@ -38,6 +40,7 @@
     "static/media/poorsausage-bullet.mp4": "/my-book/static/media/poorsausage-bullet.6fd2d11e9feda4698c32.mp4",
     "static/media/submarine-red_panda.mp4": "/my-book/static/media/submarine-red_panda.209462b3fddd3987e71b.mp4",
     "static/media/dogjammer.mp4": "/my-book/static/media/dogjammer.012b52d0627d57b15e35.mp4",
+    "static/media/whatsinpic-main.png": "/my-book/static/media/whatsinpic-main.eb6fe52faf918327d414.png",
     "static/media/patternrun-jetpack.png": "/my-book/static/media/patternrun-jetpack.b9380e8abc6ae740de76.png",
     "static/media/patternrun-movement_strategy.png": "/my-book/static/media/patternrun-movement_strategy.7eea279ed720136c3b3f.png",
     "static/media/opensilex_logo.png": "/my-book/static/media/opensilex_logo.289cf5bff2af3ad349a4.png",
@@ -46,10 +49,10 @@
     "static/media/BN-explanations.png": "/my-book/static/media/BN-explanations.0a72a6bfd0318bd5af3d.png",
     "index.html": "/my-book/index.html",
     "main.0f4029f9.css.map": "/my-book/static/css/main.0f4029f9.css.map",
-    "main.285e44fa.js.map": "/my-book/static/js/main.285e44fa.js.map"
+    "main.36ae4952.js.map": "/my-book/static/js/main.36ae4952.js.map"
   },
   "entrypoints": [
     "static/css/main.0f4029f9.css",
-    "static/js/main.285e44fa.js"
+    "static/js/main.36ae4952.js"
   ]
 }
