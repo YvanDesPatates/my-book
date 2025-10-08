@@ -95,8 +95,12 @@ const project_info = [
     {
         key: "whatsinpic",
         name: "What's in Pic",
-        imageName: "dachshund2.gif",
-        short_desc: "Une simple application mobile capable de reconnaitre des objets du quotidien dans une image",
+        imageName: "whatsinpic-main.png",
+        images: ["whatsinpic-lynx.mp4", "whatsinpic-daschund-and-bike.mp4"],
+        short_desc: "Une simple application mobile et web capable de reconnaitre des objets du quotidien dans une image",
+        desc: "Ce projet est né d'une envie d'explorer le domaine de l'<strong>intelligence artificielle</strong> et du <strong>machine learning</strong>. J'ai voulu créer une application capable de reconnaitre des objets du quotidien dans une image, en utilisant des modèles pré-entraînés disponibles sur HuggingFace.</br></br>" +
+             "J'ai développé un API en Node typée en Typescript pour récupérer l'image du front. La reconnaissance d'image se fait via python. </br></br>" +
+             "développé en React Native, le front est minimaliste mais s'adapte bien en mobile et en web, avec la possibilité d'upload une image depuis son système de fichier.",
         links: [
             {name: "Github repository", url: "https://github.com/YvanDesPatates/IA_what_s_in_pic"},
         ],
