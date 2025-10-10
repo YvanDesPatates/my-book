@@ -20,7 +20,7 @@ const domaine_competency = [
         key: "IA",
         description: "Mes 4èmes et 5èmes années d'études en <strong>spécialitées IA et Big Data</strong> m'ont permis d'explorer les domaines de l'intelligence artificielle. Entrainement de modèles, composition par couches, pipelines de données, et bien d'autres sujets ont été abordés durant ces deux années. J'ai également pu mettre en pratique ces connaissances dans le cadre de projets étudiants.",
         tags: ["NLP", "LLM", "Python", "machine learning"],
-        projects_keys: ["whatsinpic",],
+        projects_keys: ["whatsinpic", "pathfinder","xraychest"],
     },
     {
         key: "Blender",

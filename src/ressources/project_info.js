@@ -93,27 +93,13 @@ const project_info = [
         tags: ["Game", "Javascript", "HTML", "CSS", "Web", "premier projet"],
     },
     {
-        key: "whatsinpic",
-        name: "What's in Pic",
-        imageName: "whatsinpic-main.png",
-        images: ["whatsinpic-lynx.mp4", "whatsinpic-daschund-and-bike.mp4"],
-        short_desc: "Une simple application mobile et web capable de reconnaitre des objets du quotidien dans une image",
-        desc: "Ce projet est né d'une envie d'explorer le domaine de l'<strong>intelligence artificielle</strong> et du <strong>machine learning</strong>. J'ai voulu créer une application capable de reconnaitre des objets du quotidien dans une image, en utilisant des modèles pré-entraînés disponibles sur HuggingFace.</br></br>" +
-             "J'ai développé un API en Node typée en Typescript pour récupérer l'image du front. La reconnaissance d'image se fait via python. </br></br>" +
-             "développé en React Native, le front est minimaliste mais s'adapte bien en mobile et en web, avec la possibilité d'upload une image depuis son système de fichier.",
-        links: [
-            {name: "Github repository", url: "https://github.com/YvanDesPatates/IA_what_s_in_pic"},
-        ],
-        tags: ["AI", "Python", "HuggingFace", "NodeJS", "API"]
-    },
-    {
         key: "personaljsframework",
         name: "Framework JS maison",
         imageName: "personaljsframework.png",
         short_desc: "Les débuts d'un framework JS fait maison, permettant de créer des API Typescript plus simples et organisées.",
         desc: "Le but de ce framework était de mieux comprendre les différents frameworks que j'utilise, mais aussi de mettre en pratique les concepts d'architecture logicielle que j'ai appris.</br></br>" +
-            "Ce projet a été très intéressant. J'y ai beaucoup appris sur la <strong>généricité</strong> et les <strong> classes paramétrées</strong>.</br></br> " +
-            "Evidemment, il est loin d'un framework complet, crée par une équipe de développeurs plus qu'aguerris, et il manque cruellement de documentation. Mais j'ai tout de même pu implémenter ce mini-framework, avec succès, dans plusieurs projets étudiants. Ce projet est véritablement opérationnel pour des projets de petite envergure style prototype.",
+        "Ce projet a été très intéressant. J'y ai beaucoup appris sur la <strong>généricité</strong> et les <strong> classes paramétrées</strong>.</br></br> " +
+        "Evidemment, il est loin d'un framework complet, crée par une équipe de développeurs plus qu'aguerris, et il manque cruellement de documentation. Mais j'ai tout de même pu implémenter ce mini-framework, avec succès, dans plusieurs projets étudiants. Ce projet est véritablement opérationnel pour des projets de petite envergure style prototype.",
         links: [{name: "Github repository", url: "https://github.com/YvanDesPatates/ts_api_template"}],
         tags: ["Framework", "Typescript", "Design Patterns", "Généricité", "Typescript"]
     },
@@ -124,7 +110,7 @@ const project_info = [
         images: ["opensilex_connexion.png", "opensilex_accounts.png"],
         short_desc: "Application web de gestion de données de recherches à gros volumes. Projet Open Source porté par les valeurs de l'Open Science et du Web Sémantique.",
         desc: "J'ai eu la chance de travailler pour OpenSILEX durant près de <strong>4 ans en tant que développeur full-stack</strong>. J'y ai appris à développer des applications web complexes, à faire de la veille technologique et à travailler en équipe.</br></br>" +
-            "OpenSILEX est une application web de gestion de données de recherches à gros volumes, développée en Java et VueJS. Elle est utilisée par des laboratoires de recherche en agronomie pour gérer leurs données et leurs projets.</br></br>" +
+        "OpenSILEX est une application web de gestion de données de recherches à gros volumes, développée en Java et VueJS. Elle est utilisée par des laboratoires de recherche en agronomie pour gérer leurs données et leurs projets.</br></br>" +
             "<p class='desc-subtitle'>Une expérience enrichissante</p>" +
             "Cette expérience a été très riche en apprentissages, aussi bien humains que techniques. Ce fut l'occasion d'intégrer un vrai worklfow SCRUM dans une équipe d'une dizaine de personnes, de travailler sur des problématiques de gestion de données complexes et d'apprendre à utiliser de nouvelles technologies.</br>Intégrer un projet de grande empleur ma permis de maitriser les sujets importants que sont la documentation et la dette technique.</br></br>" +
             "<p class='desc-subtitle'>Architecture logicielle</p>" +
@@ -142,7 +128,7 @@ const project_info = [
         images: ["patternrun-movement_strategy.png", "patternrun-beginning.mp4", "patternrun-double_jump.mp4", "patternrun-gameover.png"],
         short_desc: "Création d'un cours sur l'architecture logicielle en C# mêlant théorie et mise en pratique de patterns.",
         desc: "Mon ancienne école a souhaité que je crée un cours sur l'architecture logicielle. J'ai créé un TP d'une demi-journée servant d'introduction à l'architecture logicielle et aux designs patterns.</br></br>"+
-            "Ce TP prends la forme d'un jeu vidéo où nous codons ensemble certaines fonctionnalités manquantes. Le choix de faire un jeu est motivé par ma passion, mais aussi car c'est un environnement vivant et complexe dans lequel les patterns sont très utiles, presque évidents. Cela permet également de rendre l'apprentissage beaucoup plus ludique.</br></br>",
+        "Ce TP prends la forme d'un jeu vidéo où nous codons ensemble certaines fonctionnalités manquantes. Le choix de faire un jeu est motivé par ma passion, mais aussi car c'est un environnement vivant et complexe dans lequel les patterns sont très utiles, presque évidents. Cela permet également de rendre l'apprentissage beaucoup plus ludique.</br></br>",
         links: [
             {name: "Github repository", url: "https://github.com/YvanDesPatates/pattern_run"},
             {name: "Jouer en ligne", url: "https://play.unity.com/en/games/0784f5cf-534d-4d46-9c56-30ed911999a8/pattern-run"},
@@ -157,12 +143,56 @@ const project_info = [
         desc: "Durant mes études, j'ai eu plusieurs projets étudiants, sous formes d'exercices, qui m'ont permis de comprendre l'importance d'une architecture logicielle solide et maintenable.</br></br>" +
             "Ces projets m'ont appris à utiliser des design patterns, à mettre en oeuvre une architecture en couches et à comprendre les principes d'architecture logicielle (SOLID, GRASP, KISS).</br></br>" +
             "C'est grâce à ces bases solides que j'ai pu continuer à développer mes compétences en architecture logicielle au quotidien, dans mes projets personnels et professionnels.",
+            links: [
+                {name: "projet patterns", url: "https://github.com/YvanDesPatates/coffre-chateau-patterns"},
+                {name: "projet architecture en couche", url: "https://github.com/YvanDesPatates/projetStocks"},
+                {name: "projet command pattern", url: "https://github.com/YvanDesPatates/patternCommand"},
+            ],
+    },
+    {
+        key: "whatsinpic",
+        name: "What's in Pic",
+        imageName: "whatsinpic-main.png",
+        images: ["whatsinpic-lynx.mp4", "whatsinpic-daschund-and-bike.mp4"],
+        short_desc: "Une simple application mobile et web capable de reconnaitre des objets du quotidien dans une image",
+        desc: "Ce projet est né d'une envie d'explorer le domaine de l'<strong>intelligence artificielle</strong> et du <strong>machine learning</strong>. J'ai voulu créer une application capable de reconnaitre des objets du quotidien dans une image, en utilisant des modèles pré-entraînés disponibles sur HuggingFace.</br></br>" +
+                "J'ai développé un API en Node typée en Typescript pour récupérer l'image du front. La reconnaissance d'image se fait via python. </br></br>" +
+                "développé en React Native, le front est minimaliste mais s'adapte bien en mobile et en web, avec la possibilité d'upload une image depuis son système de fichier.",
         links: [
-            {name: "projet patterns", url: "https://github.com/YvanDesPatates/coffre-chateau-patterns"},
-            {name: "projet architecture en couche", url: "https://github.com/YvanDesPatates/projetStocks"},
-            {name: "projet command pattern", url: "https://github.com/YvanDesPatates/patternCommand"},
+            {name: "Github repository", url: "https://github.com/YvanDesPatates/IA_what_s_in_pic"},
         ],
-    }
+        tags: ["AI", "Python", "Image Recognition", "HuggingFace", "NodeJS", "API"]
+    },
+    {
+        key: "pathfinder",
+        name: "Path Finder",
+        imageName: "pathfinder-main.png",
+        short_desc: "mini interface python permettant de demander un intinéraire de train à haute voix.",
+        desc: "Un projet à plusieurs facette dans lequelle il faut reconnaitre le language parlé, le transcrire, extraire les informations importantes puis calculer un itinéraire optimale.</br></br>" +
+              "<strong>Reconnaissance vocale</strong> : Utilisation de la librairie SpeechRecognition<br> </br>" +
+                "<strong>NLP</strong> Traitement du langage naturel : Création d'un modèle de classification binaire afin de determiner si oui on non une phrase est une demande d'itinéraire. Création de modèle, création de dataset, entraînement, recherche des meilleurs paramètres et évaluation du modèle<br></br>" +
+                "<strong>NER</strong> Reconnaissance d'entités nommées : utilisation d'un modèle à finetuner qui extrait les gares de départ et d'arrivée dans une phrase.<br></br>" +
+                "<strong>Calcul d'itinéraire</strong> : Utilisation de l'algorithme de Dijkstra pour calculer l'itinéraire le plus court entre deux gares dans un graphe pondéré représentant le réseau ferroviaire français.<br></br>" +
+                "<strong>Modèles de classification</strong> : Pour chacun de nos modèles de NLP et NER nous sommes passés par plusieurs étapes : <li>création d'un dataset</li> <li>entraînement du modèle</li> <li>recherche des meilleurs paramètres</li> <li>évaluation du modèle</li>",
+            links: [
+                {name: "Github repository", url: "https://github.com/YvanDesPatates/AI_Path_finding_NER_NLP"},
+            ],
+        tags: ["NER", "NLP", "Python", "Dijkstra"] 
+    },
+    {
+        key: "xraychest",
+        name: "X-Ray Chest",
+        imageName: "xraychest-main.png",
+        images: ["xraychest-learning_curve.png", "xraychest-image_modif.png", "xraychest-matrice_confusion1.png", "xraychest-matrice_confusion2.png", "xraychest-data_distribution.png"],
+        short_desc: "Modèle de détection de maladies pulmonaires à partir d'images radiologiques.",
+        desc: "Projet de classification binaire d'images radiologiques de thorax, afin de détecter la présence ou non d'une maladie pulmonaire.</br></br>" +
+              "La première étape était de <strong>préparer et nettoyer le dataset</strong>, étape cruciale pour garantir la qualité des données d'entraînement. </br></br>" +
+              "Pour la suite, il à fallut mettre au point et respecter une <strong> méthodologie rigoureuse</strong> pour entraîner et évaluer les différents modèles. Le but était de trouver le type de modèle le plus adapté à notre problème. Puis ensuite de déterminer les meilleurs hyperparamètres d'entrainements afin de maximiser nos résultats.",
+        links: [
+            {name: "Github repository", url: "https://github.com/YvanDesPatates/IA_XRay_chest/tree/main"},
+        ],
+        tags: ["AI", "Deep Learning", "Medical Imaging", "Binary Classification", "Python"]
+    },
 
 
 ];
