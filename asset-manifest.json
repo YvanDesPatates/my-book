@@ -1,18 +1,36 @@
 {
   "files": {
-    "main.css": "/my-book/static/css/main.0f4029f9.css",
-    "main.js": "/my-book/static/js/main.111dd54d.js",
+    "main.css": "/my-book/static/css/main.dddff2de.css",
+    "main.js": "/my-book/static/js/main.3f2bb21b.js",
     "static/media/ebullixir-spider_and_client.mp4": "/my-book/static/media/ebullixir-spider_and_client.422d4ea85af2175fb7e8.mp4",
     "static/media/dachshund2.gif": "/my-book/static/media/dachshund2.f0e219d44341460d6363.gif",
     "static/media/ebullixir-failed_elixir.mp4": "/my-book/static/media/ebullixir-failed_elixir.0ee4e0e6a4408407fa79.mp4",
     "static/media/ebullixir-success_elixir.mp4": "/my-book/static/media/ebullixir-success_elixir.1c2647193829b0a79bc7.mp4",
+    "static/media/17_grave.png": "/my-book/static/media/17_grave.13a901325d972e769325.png",
+    "static/media/31_assemble.png": "/my-book/static/media/31_assemble.1c9653ad03766295061c.png",
+    "static/media/19_goat.png": "/my-book/static/media/19_goat.3a55e017a7ca05e66c31.png",
     "static/media/ebullixir-cut_watermelon.mp4": "/my-book/static/media/ebullixir-cut_watermelon.5e805e738839baa9f1e0.mp4",
+    "static/media/20_candle.png": "/my-book/static/media/20_candle.973596a420a15471c370.png",
     "static/media/poorsausage-ax.gif": "/my-book/static/media/poorsausage-ax.9eac21a77720ce26ffce.gif",
+    "static/media/28_mushroom.png": "/my-book/static/media/28_mushroom.f02163cca438dc25258f.png",
+    "static/media/18_corn.png": "/my-book/static/media/18_corn.b979fb5be506fe780676.png",
+    "static/media/snowman.png": "/my-book/static/media/snowman.726da0b30f9bb7419ad4.png",
+    "static/media/15_mirror.png": "/my-book/static/media/15_mirror.b39cec5862b63c0c771d.png",
+    "static/media/22_frog.png": "/my-book/static/media/22_frog.83c0a960e9d4716a0a6a.png",
+    "static/media/30_devil.png": "/my-book/static/media/30_devil.75b22c18061851ddae76.png",
+    "static/media/26_gragouille.png": "/my-book/static/media/26_gragouille.0c963e32d2317dd3bf93.png",
+    "static/media/23_sword.png": "/my-book/static/media/23_sword.0639af1fa208d922ec1e.png",
+    "static/media/29_death.png": "/my-book/static/media/29_death.ee678668ec9862c2851a.png",
+    "static/media/27_cat.png": "/my-book/static/media/27_cat.6edd4c0bb96533de224b.png",
     "static/media/opensilex_connexion.png": "/my-book/static/media/opensilex_connexion.48fa9ae1fdb5971748db.png",
     "static/media/ebullixir-recipie_and_client.mp4": "/my-book/static/media/ebullixir-recipie_and_client.c0524fa1dfc01f3aecae.mp4",
+    "static/media/21_cabin.png": "/my-book/static/media/21_cabin.1729046e5a7811f6d920.png",
     "static/media/poorsausage-demo.mp4": "/my-book/static/media/poorsausage-demo.1c358c8f98f10ad48bed.mp4",
+    "static/media/16_moon.png": "/my-book/static/media/16_moon.0c94d2d10323269332cd.png",
+    "static/media/14_hole.png": "/my-book/static/media/14_hole.9b2c6ecddea37ae86992.png",
     "static/media/ebullixir-home_run.mp4": "/my-book/static/media/ebullixir-home_run.d753973906f63999be0f.mp4",
     "static/media/ebullixir-showup.mp4": "/my-book/static/media/ebullixir-showup.c7db9e313e21426aafa3.mp4",
+    "static/media/25_map.png": "/my-book/static/media/25_map.96ba4df7bf491b21b248.png",
     "static/media/patternrun-double_jump.mp4": "/my-book/static/media/patternrun-double_jump.4c2750edcf23bf6e4a49.mp4",
     "static/media/tuto2.mp4": "/my-book/static/media/tuto2.f154269e91c7741b4749.mp4",
     "static/media/BN-ship_placement.mp4": "/my-book/static/media/BN-ship_placement.e8cf95f0872ba793df37.mp4",
@@ -38,6 +56,7 @@
     "static/media/submarine-submarine_travel.mp4": "/my-book/static/media/submarine-submarine_travel.904ae4ad46a75a8bef94.mp4",
     "static/media/submarine-main.mp4": "/my-book/static/media/submarine-main.f91f6f9eb0979e78f80c.mp4",
     "static/media/tuto1.mp4": "/my-book/static/media/tuto1.a8d21ba7bd1c192d1190.mp4",
+    "static/media/15_mirror_anim.mkv": "/my-book/static/media/15_mirror_anim.be52f3c6fd975b57f8e1.mkv",
     "static/media/poorsausage-bullet.mp4": "/my-book/static/media/poorsausage-bullet.6fd2d11e9feda4698c32.mp4",
     "static/media/submarine-red_panda.mp4": "/my-book/static/media/submarine-red_panda.209462b3fddd3987e71b.mp4",
     "static/media/dogjammer.mp4": "/my-book/static/media/dogjammer.012b52d0627d57b15e35.mp4",
@@ -55,11 +74,11 @@
     "static/media/BN-explanations.png": "/my-book/static/media/BN-explanations.0a72a6bfd0318bd5af3d.png",
     "static/media/xraychest-matrice_confusion1.png": "/my-book/static/media/xraychest-matrice_confusion1.cfb9d4ead7bb6cc334b5.png",
     "index.html": "/my-book/index.html",
-    "main.0f4029f9.css.map": "/my-book/static/css/main.0f4029f9.css.map",
-    "main.111dd54d.js.map": "/my-book/static/js/main.111dd54d.js.map"
+    "main.dddff2de.css.map": "/my-book/static/css/main.dddff2de.css.map",
+    "main.3f2bb21b.js.map": "/my-book/static/js/main.3f2bb21b.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f4029f9.css",
-    "static/js/main.111dd54d.js"
+    "static/css/main.dddff2de.css",
+    "static/js/main.3f2bb21b.js"
   ]
 }
