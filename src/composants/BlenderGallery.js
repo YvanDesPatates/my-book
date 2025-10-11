@@ -4,41 +4,41 @@ import '../ressources/css/blenderGallery.css';
 export default function BlenderGallery() {
     const [isOpen, setIsOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
-    // Hard-coded list of blender images (require at build-time)
-    const images = [
-        require('../ressources/images/blender/14_hole.png'),
-        require('../ressources/images/blender/15_mirror.png'),
-        require('../ressources/images/blender/15_mirror_anim.mkv'),
-        require('../ressources/images/blender/16_moon.png'),
-        require('../ressources/images/blender/17_grave.png'),
-        require('../ressources/images/blender/18_corn.png'),
-        require('../ressources/images/blender/19_goat.png'),
-        require('../ressources/images/blender/20_candle.png'),
-        require('../ressources/images/blender/21_cabin.png'),
-        require('../ressources/images/blender/22_frog.png'),
-        require('../ressources/images/blender/23_sword.png'),
-        require('../ressources/images/blender/25_map.png'),
-        require('../ressources/images/blender/26_gragouille.png'),
-        require('../ressources/images/blender/27_cat.png'),
-        require('../ressources/images/blender/28_mushroom.png'),
-        require('../ressources/images/blender/29_death.png'),
-        require('../ressources/images/blender/30_devil.png'),
-        require('../ressources/images/blender/31_assemble.png'),
-        require('../ressources/images/blender/snowman.png'),
-    ];
+    const [media, setMedia] = useState([]);
+
+    useEffect(() => {
+        // Try to use webpack's require.context to dynamically import all files in the blender folder
+        try {
+            const req = require.context('../ressources/images/blender', false, /.*\.(png|jpe?g|gif|mp4|mkv|webm)$/i);
+            // sort keys alphabetically for deterministic order
+            const keys = req.keys().sort();
+            const loaded = keys.map(key => {
+                const src = req(key);
+                const match = key.match(/\.([0-9a-z]+)$/i);
+                const ext = match ? match[1].toLowerCase() : '';
+                const type = (ext === 'mp4' || ext === 'mkv' || ext === 'webm') ? 'video' : 'image';
+                return {src, type, name: key.replace('./', '')};
+            });
+            setMedia(loaded);
+        } catch (e) {
+            // Fallback: if require.context is not available, log and keep media empty
+            console.error('require.context not available or failed to load blender assets', e);
+            setMedia([]);
+        }
+    }, []);
 
     useEffect(() => {
         function onKey(e) {
             if (!isOpen) return;
             if (e.key === 'Escape') setIsOpen(false);
-            if (e.key === 'ArrowRight') setCurrentIndex(i => Math.min(i + 1, images.length - 1));
+            if (e.key === 'ArrowRight') setCurrentIndex(i => Math.min(i + 1, media.length - 1));
             if (e.key === 'ArrowLeft') setCurrentIndex(i => Math.max(i - 1, 0));
         }
         window.addEventListener('keydown', onKey);
         return () => window.removeEventListener('keydown', onKey);
-    }, [isOpen, images.length]);
+    }, [isOpen, media.length]);
 
-    if (!images || images.length === 0) {
+    if (!media || media.length === 0) {
         return (
             <div className="blender-gallery-empty container mx-auto px-4 py-12 max-w-6xl text-center">
                 <p className="text-gray-500">Aucune image disponible pour le moment. Revenez bientôt !</p>
@@ -52,14 +52,18 @@ export default function BlenderGallery() {
     };
 
     const prev = () => setCurrentIndex(i => (i <= 0 ? i : i - 1));
-    const next = () => setCurrentIndex(i => (i >= images.length - 1 ? i : i + 1));
+    const next = () => setCurrentIndex(i => (i >= media.length - 1 ? i : i + 1));
 
     return (
         <div className="blender-gallery container mx-auto px-4 py-12 max-w-6xl">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                {images.map((img, idx) => (
+                {media.map((m, idx) => (
                     <button key={idx} className="gallery-item" onClick={() => openAt(idx)}>
-                        <img src={img} alt={`blender-${idx}`} className="gallery-thumb rounded-lg object-cover" />
+                        {m.type === 'image' ? (
+                            <img src={m.src} alt={`blender-${idx}`} className="gallery-thumb rounded-lg object-cover" />
+                        ) : (
+                            <video src={m.src} className="gallery-thumb rounded-lg object-cover" muted loop playsInline autoPlay />
+                        )}
                     </button>
                 ))}
             </div>
@@ -69,9 +73,13 @@ export default function BlenderGallery() {
                     <div className="blender-lightbox-content" onClick={(e) => e.stopPropagation()}>
                         <button className="lightbox-close" onClick={() => setIsOpen(false)}>×</button>
                         <button className="lightbox-nav left" onClick={prev} disabled={currentIndex === 0}>{'<'}</button>
-                        <img src={images[currentIndex]} alt={`blender-large-${currentIndex}`} className="lightbox-image" />
-                        <button className="lightbox-nav right" onClick={next} disabled={currentIndex === images.length - 1}>{'>'}</button>
-                        <div className="lightbox-caption">{currentIndex + 1} / {images.length}</div>
+                        {media[currentIndex].type === 'image' ? (
+                            <img src={media[currentIndex].src} alt={`blender-large-${currentIndex}`} className="lightbox-image" />
+                        ) : (
+                            <video src={media[currentIndex].src} className="lightbox-image" controls autoPlay />
+                        )}
+                        <button className="lightbox-nav right" onClick={next} disabled={currentIndex === media.length - 1}>{'>'}</button>
+                        <div className="lightbox-caption">{currentIndex + 1} / {media.length}</div>
                     </div>
                 </div>
             )}
