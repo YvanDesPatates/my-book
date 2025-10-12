@@ -101,8 +101,13 @@ export default function CarouselModal({ images, isOpen, onClose, startIndex = 0 
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
                 >
-                    <button className="carousel-close-button" onClick={onClose}>
-                        &times;
+                    <button className="carousel-close-button" onClick={onClose} aria-label="Fermer la galerie">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M18 6L6 18" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M6 6L18 18" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M18 6L6 18" stroke="#000000" strokeWidth="0.6" strokeOpacity="0.25" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M6 6L18 18" stroke="#000000" strokeWidth="0.6" strokeOpacity="0.25" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
                     </button>
                     <div className="arrows">
                         <button className="carousel-arrow prev-arrow" onClick={handlePrev}>

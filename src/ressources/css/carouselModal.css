@@ -37,38 +37,64 @@
 .arrows {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    height: 75%;
+    width: 100%;
+    height: 100%;
     position: absolute;
 }
 
 .carousel-arrow {
-    font-size: 36px;
-    color: white;
-    cursor: pointer;
-    z-index: 2;
+    /* large clickable zone */
     width: 45%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* default align left for prev */
     position: relative;
+    z-index: 30;
 }
 
-.next-arrow {
-    text-align: end;
-    left: 15px;
+
+.carousel-arrow svg {
+    background: rgba(0,0,0,0.45);
+    padding: 10px;
+    border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    transition: transform 0.12s ease, background 0.12s ease;
 }
 
-.prev-arrow {
-    text-align: start;
-    right: 15px;
+.carousel-arrow:hover svg,
+.carousel-arrow:focus svg {
+    transform: scale(1.06);
+    background: rgba(0,0,0,0.6);
 }
+
+.prev-arrow { justify-content: flex-start; padding-left: 12px; }
+.next-arrow { justify-content: flex-end; padding-right: 12px; }
 
 .carousel-close-button {
     position: absolute;
-    top: 10px;
-    right: 60px;
-    font-size: 24px;
-    color: white;
+    top: 12px;
+    right: 14px;
+    font-size: 20px;
+    color: #ffffff;
     cursor: pointer;
-    z-index: 2;
+    z-index: 55;
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 8px 10px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+    transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.carousel-close-button:hover,
+.carousel-close-button:focus {
+    transform: scale(1.03);
+    background: rgba(255,255,255,0.06);
 }
 
 .carousel-points {
