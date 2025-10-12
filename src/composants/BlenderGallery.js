@@ -11,14 +11,40 @@ export default function BlenderGallery() {
             const req = require.context('../ressources/images/blender', false, /.*\.(png|jpe?g|gif|mp4|mkv|webm)$/i);
             // sort keys alphabetically for deterministic order
             const keys = req.keys().sort();
-            const loaded = keys.map(key => {
+            const loadedAll = keys.map(key => {
                 const src = req(key);
                 const match = key.match(/\.([0-9a-z]+)$/i);
                 const ext = match ? match[1].toLowerCase() : '';
                 const type = (ext === 'mp4' || ext === 'mkv' || ext === 'webm') ? 'video' : 'image';
                 return {src, type, name: key.replace('./', '')};
             });
-            setMedia(loaded);
+
+            // set first 4 immediately for instant loading
+            const firstBatch = loadedAll.slice(0, 4);
+            setMedia(firstBatch);
+
+            // load remaining in background (use requestIdleCallback when available)
+            const loadRemaining = () => {
+                const rest = loadedAll.slice(4);
+                if (rest.length) setMedia(prev => [...prev, ...rest]);
+            };
+
+            let idleId = null;
+            if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+                idleId = window.requestIdleCallback(loadRemaining, {timeout: 2000});
+            } else {
+                // fallback to small timeout
+                idleId = setTimeout(loadRemaining, 300);
+            }
+
+            // cleanup handler will cancel later
+            return () => {
+                if (typeof window !== 'undefined' && 'cancelIdleCallback' in window && idleId) {
+                    window.cancelIdleCallback(idleId);
+                } else if (idleId) {
+                    clearTimeout(idleId);
+                }
+            };
         } catch (e) {
             // Fallback: if require.context is not available, log and keep media empty
             console.error('require.context not available or failed to load blender assets', e);

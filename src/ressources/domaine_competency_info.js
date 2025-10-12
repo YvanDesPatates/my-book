@@ -24,7 +24,7 @@ const domaine_competency = [
     },
     {
         key: "Blender",
-        description: "⚠️ Work in progress ⚠️</br> Bientôt des images des modèles 3D seront disponibles </br></br>Plus un passe temps qu'une compétence professionnelle, la modélisation 3D et l'animation avec Blender est une activité que j'apprécie particulièrement. Complémentaire avec ma passion pour le développement de jeux vidéo, j'utilise Blender pour créer des assets 3D que j'intègre ensuite dans mes projets.",
+        description: "Plus un passe temps qu'une compétence professionnelle, la modélisation 3D et l'animation avec Blender est une activité que j'apprécie particulièrement. Complémentaire avec ma passion pour le développement de jeux vidéo, j'utilise Blender pour créer des assets 3D que j'intègre ensuite dans mes projets.",
         projects_keys: [""]
     },
 
