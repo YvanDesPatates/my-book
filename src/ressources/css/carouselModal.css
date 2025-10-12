@@ -15,6 +15,28 @@
     position: relative;
 }
 
+/* Ensure the modal keeps a sensible minimum size while media is loading
+   so the layout doesn't 'jump' when the image/video finishes loading. */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* minimum visible area so unloaded media doesn't collapse the modal */
+    min-width: 280px;
+    min-height: 200px;
+    /* subtle neutral background to avoid harsh black box when media missing */
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));
+    border-radius: 8px;
+}
+
+/* Larger minimum size on wide viewports for better presentation */
+@media (min-width: 1024px) {
+    .image-container {
+        min-width: 480px;
+        min-height: 320px;
+    }
+}
+
 .carousel-image {
     /* Limit size relative to viewport to avoid overflow on large screens */
     max-width: 90vw;

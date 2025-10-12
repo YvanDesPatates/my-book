@@ -18,33 +18,7 @@ export default function BlenderGallery() {
                 const type = (ext === 'mp4' || ext === 'mkv' || ext === 'webm') ? 'video' : 'image';
                 return {src, type, name: key.replace('./', '')};
             });
-
-            // set first 4 immediately for instant loading
-            const firstBatch = loadedAll.slice(0, 4);
-            setMedia(firstBatch);
-
-            // load remaining in background (use requestIdleCallback when available)
-            const loadRemaining = () => {
-                const rest = loadedAll.slice(4);
-                if (rest.length) setMedia(prev => [...prev, ...rest]);
-            };
-
-            let idleId = null;
-            if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-                idleId = window.requestIdleCallback(loadRemaining, {timeout: 2000});
-            } else {
-                // fallback to small timeout
-                idleId = setTimeout(loadRemaining, 300);
-            }
-
-            // cleanup handler will cancel later
-            return () => {
-                if (typeof window !== 'undefined' && 'cancelIdleCallback' in window && idleId) {
-                    window.cancelIdleCallback(idleId);
-                } else if (idleId) {
-                    clearTimeout(idleId);
-                }
-            };
+            setMedia(loadedAll);
         } catch (e) {
             // Fallback: if require.context is not available, log and keep media empty
             console.error('require.context not available or failed to load blender assets', e);
