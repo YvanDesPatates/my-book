@@ -16,13 +16,16 @@
 }
 
 .carousel-image {
-    max-width: 80%;
-    max-height: 80%;
+    /* Limit size relative to viewport to avoid overflow on large screens */
+    max-width: 90vw;
+    max-height: 90vh;
     border-radius: 10px;
     transition: none;
     /* Pour éviter les effets de transition CSS classiques */
     position: relative;
     z-index: 1;
+    display: block;
+    object-fit: contain;
 }
 
 .image-container {

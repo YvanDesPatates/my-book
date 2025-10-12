@@ -22,10 +22,12 @@ export class CarouselModalManager {
 export default function App() {
     const [modalOpen, setModalOpen] = useState(false);
     const [modalImages, setModalImages] = useState([]);
+    const [modalStartIndex, setModalStartIndex] = useState(0);
 
     useEffect(() => {
-        CarouselModalManager.open = (images) => {
+        CarouselModalManager.open = (images, startIndex = 0) => {
             setModalImages(images);
+            setModalStartIndex(startIndex);
             setModalOpen(true);
         };
     }, []);
@@ -37,6 +39,7 @@ export default function App() {
                 images={modalImages}
                 isOpen={modalOpen}
                 onClose={() => setModalOpen(false)}
+                startIndex={modalStartIndex}
             />
             <div className='min-h-screen hero-gradient'>
                 <Header/>

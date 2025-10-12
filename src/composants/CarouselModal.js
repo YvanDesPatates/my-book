@@ -1,31 +1,21 @@
 import React, {useState, useRef, useEffect} from 'react';
 import '../ressources/css/carouselModal.css';
 
-export default function CarouselModal({ images, isOpen, onClose }) {
+export default function CarouselModal({ images, isOpen, onClose, startIndex = 0 }) {
 
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(startIndex);
     const [slideDirection, setSlideDirection] = useState(null); // 'left' ou 'right'
     const [isSliding, setIsSliding] = useState(false);
     const touchStartX = useRef(null);
     const touchEndX = useRef(null);
 
-    // Ajout gestion touche échappe
-    useEffect(() => {
-        if (!isOpen) return;
-        const handleKeyDown = (e) => {
-            if (e.key === 'Escape') {
-                onClose();
-            }
-        };
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [isOpen, onClose]);
+    // (keyboard handling moved below so it can call handleNext/handlePrev)
 
     useEffect(() => {
-        setCurrentIndex(0);
+        setCurrentIndex(startIndex !== undefined ? startIndex : 0);
     }, [isOpen]);
 
-    const handleNext = () => {
+    const handleNext = React.useCallback(() => {
         if (isSliding) return;
         setSlideDirection('right');
         setIsSliding(true);
@@ -33,9 +23,9 @@ export default function CarouselModal({ images, isOpen, onClose }) {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
             setIsSliding(false);
         }, 300);
-    };
+    }, [isSliding, images.length]);
 
-    const handlePrev = () => {
+    const handlePrev = React.useCallback(() => {
         if (isSliding) return;
         setSlideDirection('left');
         setIsSliding(true);
@@ -43,7 +33,7 @@ export default function CarouselModal({ images, isOpen, onClose }) {
             setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
             setIsSliding(false);
         }, 300);
-    };
+    }, [isSliding, images.length]);
 
     // Gestion du swipe
     const handleTouchStart = (e) => {
@@ -69,6 +59,22 @@ export default function CarouselModal({ images, isOpen, onClose }) {
         touchEndX.current = null;
     };
 
+    // Keyboard navigation: left/right to change slides, Escape to close
+    useEffect(() => {
+        if (!isOpen) return;
+        const onKey = (e) => {
+            if (e.key === 'Escape') {
+                onClose();
+            } else if (e.key === 'ArrowRight') {
+                handleNext();
+            } else if (e.key === 'ArrowLeft') {
+                handlePrev();
+            }
+        };
+        window.addEventListener('keydown', onKey);
+        return () => window.removeEventListener('keydown', onKey);
+    }, [isOpen, handleNext, handlePrev, onClose]);
+
     // Aller à une image précise via les points
     const handlePointClick = (index) => {
         if (isSliding || index === currentIndex) return;
@@ -81,6 +87,10 @@ export default function CarouselModal({ images, isOpen, onClose }) {
     };
 
     if (!isOpen || !images.length) return null;
+
+    const currentSrc = images[currentIndex];
+    const lower = currentSrc ? currentSrc.toLowerCase() : '';
+    const isCurrentVideo = lower.endsWith('.mp4') || lower.endsWith('.m4v') || lower.endsWith('.mkv') || lower.endsWith('.webm');
 
     return (
         <div className="carousel-modal-overlay" onClick={onClose}>
@@ -102,10 +112,9 @@ export default function CarouselModal({ images, isOpen, onClose }) {
                             &#8250;
                         </button>
                     </div>
-                    {
-                        images[currentIndex].toLowerCase().endsWith('.mp4') ? (
+                        {isCurrentVideo ? (
                             <video
-                                src={images[currentIndex]}
+                                src={currentSrc}
                                 autoPlay
                                 loop
                                 className={
@@ -116,10 +125,11 @@ export default function CarouselModal({ images, isOpen, onClose }) {
                                     (!isSliding && slideDirection === 'left' ? ' slide-in-left' : '')
                                 }
                                 onAnimationEnd={() => setSlideDirection(null)}
+                                controls
                             />
                         ) : (
                             <img
-                                src={images[currentIndex]}
+                                src={currentSrc}
                                 alt={`Slide ${currentIndex + 1}`}
                                 className={
                                     `carousel-image` +
@@ -130,8 +140,7 @@ export default function CarouselModal({ images, isOpen, onClose }) {
                                 }
                                 onAnimationEnd={() => setSlideDirection(null)}
                             />
-                        )
-                    }
+                        )}
                 </div>
                 <div className="carousel-points">
                     {images.map((_, index) => (
