@@ -8,6 +8,7 @@ export default function CarouselModal({ images, isOpen, onClose, startIndex = 0 
     const [isSliding, setIsSliding] = useState(false);
     const touchStartX = useRef(null);
     const touchEndX = useRef(null);
+    const preloadedRef = useRef({});
 
     // (keyboard handling moved below so it can call handleNext/handlePrev)
 
@@ -75,6 +76,66 @@ export default function CarouselModal({ images, isOpen, onClose, startIndex = 0 
         return () => window.removeEventListener('keydown', onKey);
     }, [isOpen, handleNext, handlePrev, onClose]);
 
+    // Preload previous and next media for smoother navigation
+    useEffect(() => {
+        if (!images || !images.length) return;
+
+        const preloadAt = (index) => {
+            if (preloadedRef.current[index]) return;
+            const src = images[index];
+            if (!src) return;
+            const lower = String(src).toLowerCase();
+            try {
+                if (lower.endsWith('.mp4') || lower.endsWith('.m4v') || lower.endsWith('.mkv') || lower.endsWith('.webm')) {
+                    const v = document.createElement('video');
+                    v.preload = 'auto';
+                    v.muted = true;
+                    v.playsInline = true;
+                    v.src = src;
+                    // try to load metadata/autoplay buffer
+                    if (typeof v.load === 'function') v.load();
+                    preloadedRef.current[index] = v;
+                } else {
+                    const img = new Image();
+                    img.src = src;
+                    preloadedRef.current[index] = img;
+                }
+            } catch (e) {
+                // ignore preload errors
+                // console.warn('preload failed', e);
+            }
+        };
+
+        const prevIndex = (currentIndex - 1 + images.length) % images.length;
+        const nextIndex = (currentIndex + 1) % images.length;
+        preloadAt(prevIndex);
+        preloadAt(nextIndex);
+
+        // no per-effect cleanup; full cleanup occurs on unmount
+        return; 
+    }, [currentIndex, images]);
+
+    // cleanup preloaded elements on unmount
+    useEffect(() => {
+        return () => {
+            try {
+                Object.keys(preloadedRef.current).forEach((k) => {
+                    const el = preloadedRef.current[k];
+                    if (!el) return;
+                    try {
+                        if (el.tagName === 'IMG') {
+                            el.src = '';
+                        } else if (el.tagName === 'VIDEO') {
+                            el.pause && el.pause();
+                            el.src = '';
+                        }
+                    } catch (e) {}
+                });
+            } catch (e) {}
+            preloadedRef.current = {};
+        };
+    }, []);
+
     // Aller à une image précise via les points
     const handlePointClick = (index) => {
         if (isSliding || index === currentIndex) return;
@@ -85,6 +146,25 @@ export default function CarouselModal({ images, isOpen, onClose, startIndex = 0 
             setIsSliding(false);
         }, 300);
     };
+
+    // Show numeric counter instead of dots when many images
+    const [showNumeric, setShowNumeric] = useState(false);
+
+    useEffect(() => {
+        function updateMode() {
+            const w = typeof window !== 'undefined' ? window.innerWidth : 1024;
+            // mobile threshold (phone): width <= 768
+            const isMobile = w <= 768;
+            if ((isMobile && images.length > 10) || (!isMobile && images.length > 20)) {
+                setShowNumeric(true);
+            } else {
+                setShowNumeric(false);
+            }
+        }
+        updateMode();
+        window.addEventListener('resize', updateMode);
+        return () => window.removeEventListener('resize', updateMode);
+    }, [images.length]);
 
     if (!isOpen || !images.length) return null;
 
@@ -110,11 +190,17 @@ export default function CarouselModal({ images, isOpen, onClose, startIndex = 0 
                         </svg>
                     </button>
                     <div className="arrows">
-                        <button className="carousel-arrow prev-arrow" onClick={handlePrev}>
-                            &#8249;
+                        <button className="carousel-arrow prev-arrow" onClick={handlePrev} aria-label="Image précédente">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M15 18L9 12L15 6" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M15 18L9 12L15 6" stroke="#000000" strokeWidth="0.6" strokeOpacity="0.25" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
                         </button>
-                        <button className="carousel-arrow next-arrow" onClick={handleNext}>
-                            &#8250;
+                        <button className="carousel-arrow next-arrow" onClick={handleNext} aria-label="Image suivante">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M9 6L15 12L9 18" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M9 6L15 12L9 18" stroke="#000000" strokeWidth="0.6" strokeOpacity="0.25" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
                         </button>
                     </div>
                         {isCurrentVideo ? (
@@ -148,14 +234,18 @@ export default function CarouselModal({ images, isOpen, onClose, startIndex = 0 
                         )}
                 </div>
                 <div className="carousel-points">
-                    {images.map((_, index) => (
-                        <span
-                            key={index}
-                            className={`carousel-point ${index === currentIndex ? 'active' : ''}`}
-                            onClick={() => handlePointClick(index)}
-                            style={{ cursor: 'pointer' }}
-                        ></span>
-                    ))}
+                    {showNumeric ? (
+                        <div className="carousel-counter">{currentIndex + 1} / {images.length}</div>
+                    ) : (
+                        images.map((_, index) => (
+                            <span
+                                key={index}
+                                className={`carousel-point ${index === currentIndex ? 'active' : ''}`}
+                                onClick={() => handlePointClick(index)}
+                                style={{ cursor: 'pointer' }}
+                            ></span>
+                        ))
+                    )}
                 </div>
             </div>
         </div>

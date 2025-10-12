@@ -125,7 +125,7 @@ const project_info = [
         key: "patternrun",
         name: "Pattern Run",
         imageName: "patternrun-jetpack.png",
-        images: ["patternrun-movement_strategy.png", "patternrun-beginning.mp4", "patternrun-double_jump.mp4", "patternrun-gameover.png"],
+        images: ["patternrun-gameover.png", "patternrun-beginning.mp4", "patternrun-double_jump.mp4", "patternrun-movement_strategy.png"],
         short_desc: "Création d'un cours sur l'architecture logicielle en C# mêlant théorie et mise en pratique de patterns.",
         desc: "Mon ancienne école a souhaité que je crée un cours sur l'architecture logicielle. J'ai créé un TP d'une demi-journée servant d'introduction à l'architecture logicielle et aux designs patterns.</br></br>"+
         "Ce TP prends la forme d'un jeu vidéo où nous codons ensemble certaines fonctionnalités manquantes. Le choix de faire un jeu est motivé par ma passion, mais aussi car c'est un environnement vivant et complexe dans lequel les patterns sont très utiles, presque évidents. Cela permet également de rendre l'apprentissage beaucoup plus ludique.</br></br>",
