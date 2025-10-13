@@ -107,25 +107,19 @@ export default function R3FModelViewer({ modelUrl = modelFile, height = 360 }) {
 
     const current = models && models.length > 0 ? models[index] : null;
 
-    const prev = () => setIndex(i => Math.max(0, i - 1));
-    const next = () => setIndex(i => Math.min((models || []).length - 1, i + 1));
+    const prev = () => setIndex(i => {
+        const len = (models || []).length;
+        if (len === 0) return 0;
+        return (i - 1 + len) % len;
+    });
+    const next = () => setIndex(i => {
+        const len = (models || []).length;
+        if (len === 0) return 0;
+        return (i + 1) % len;
+    });
 
     return (
         <div className="r3f-model-viewer container mx-auto px-4" style={{ marginBottom: 20 }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-                <div>
-                    {models.length > 0 ? (
-                        <div style={{ fontSize: 14, color: '#666' }}>{models[index].name} ({index + 1}/{models.length})</div>
-                    ) : (
-                        <div style={{ fontSize: 14, color: '#666' }}>Aucun modèle 3D trouvé</div>
-                    )}
-                </div>
-                <div>
-                    <button onClick={prev} style={{ marginRight: 8 }} disabled={index <= 0}>Prev</button>
-                    <button onClick={next} disabled={index >= models.length - 1}>Next</button>
-                </div>
-            </div>
-
             <Canvas style={{ width: '100%', height }} camera={{ position: [0, 1.2, 3], fov: 45 }}>
                 <ambientLight intensity={0.6} />
                 <directionalLight position={[5, 10, 7.5]} intensity={0.8} />
@@ -135,6 +129,81 @@ export default function R3FModelViewer({ modelUrl = modelFile, height = 360 }) {
                 </Suspense>
                 <OrbitControls enableZoom={true} enablePan={false} rotateSpeed={0.8} />
             </Canvas>
+
+            {/* Pagination controls under the canvas: arrows + dots */}
+            <div
+                role="group"
+                aria-label="Navigation des modèles"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                    if (e.key === 'ArrowLeft') prev();
+                    if (e.key === 'ArrowRight') next();
+                }}
+                style={{ display: 'flex', justifyContent: 'center', marginTop: 12, alignItems: 'center', gap: 12 }}
+            >
+                <button
+                    onClick={prev}
+                    aria-label="Modèle précédent"
+                    style={{
+                        width: 36,
+                        height: 36,
+                        borderRadius: 8,
+                        background: 'rgba(0,0,0,0.45)',
+                        color: '#fff',
+                        border: 'none',
+                        cursor: 'pointer',
+                        opacity: (models || []).length === 0 ? 0.4 : 1,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                    }}
+                >
+                    ◀
+                </button>
+
+                <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                    {(models || []).map((m, i) => {
+                        const active = i === index;
+                        return (
+                            <button
+                                key={m.name || i}
+                                onClick={() => setIndex(i)}
+                                aria-label={`Afficher modèle ${i + 1}`}
+                                style={{
+                                    width: active ? 28 : 10,
+                                    height: 10,
+                                    borderRadius: active ? 10 : 6,
+                                    background: active ? '#ffffff' : 'rgba(255,255,255,0.45)',
+                                    border: 'none',
+                                    padding: 0,
+                                    cursor: 'pointer',
+                                    transition: 'width 200ms ease, background 200ms ease'
+                                }}
+                            />
+                        );
+                    })}
+                </div>
+
+                <button
+                    onClick={next}
+                    aria-label="Modèle suivant"
+                    style={{
+                        width: 36,
+                        height: 36,
+                        borderRadius: 8,
+                        background: 'rgba(0,0,0,0.45)',
+                        color: '#fff',
+                        border: 'none',
+                        cursor: 'pointer',
+                        opacity: (models || []).length === 0 ? 0.4 : 1,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                    }}
+                >
+                    ▶
+                </button>
+            </div>
         </div>
     );
 }
