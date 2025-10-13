@@ -43,7 +43,7 @@ export default function DomaineCompetency() {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 py-12 max-w-6xl">
+            <div className="container mx-auto px-4 pb-12 max-w-6xl">
                 {domaineCompetency.key === 'Blender' ? (
                     <BlenderGallery/>
                 ) : (
