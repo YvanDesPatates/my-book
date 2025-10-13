@@ -3,7 +3,6 @@ import { Canvas, useLoader } from '@react-three/fiber';
 import { OrbitControls, Html, useProgress } from '@react-three/drei';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 import * as THREE from 'three';
-import modelFile from '../ressources/images/fbx_models/27_cat.fbx';
 import { useBlenderAssets } from './BlenderAssets';
 
 function Loader() {
@@ -94,16 +93,9 @@ function Model({ url }) {
     return instance ? <primitive ref={ref} object={instance} /> : null;
 }
 
-export default function R3FModelViewer({ modelUrl = modelFile, height = 360 }) {
+export default function R3FModelViewer({height = 360 }) {
     const { models } = useBlenderAssets();
     const [index, setIndex] = useState(0);
-
-    useEffect(() => {
-        if (models && models.length > 0) {
-            const match = models.findIndex(m => m.src === modelUrl || m.name === modelUrl);
-            if (match >= 0) setIndex(match);
-        }
-    }, [models, modelUrl]);
 
     const current = models && models.length > 0 ? models[index] : null;
 
