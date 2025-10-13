@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/my-book/static/css/main.d4889995.css",
-    "main.js": "/my-book/static/js/main.4ebb73c8.js",
+    "main.js": "/my-book/static/js/main.2e166cc3.js",
+    "static/media/03_broom.fbx": "/my-book/static/media/03_broom.afc2c8cdbbd6c1fee6af.fbx",
     "static/media/ebullixir-spider_and_client.mp4": "/my-book/static/media/ebullixir-spider_and_client.422d4ea85af2175fb7e8.mp4",
-    "static/media/27_cat.fbx": "/my-book/static/media/27_cat.beb9105dc86127f056ef.fbx",
+    "static/media/01_cat.fbx": "/my-book/static/media/01_cat.beb9105dc86127f056ef.fbx",
     "static/media/dachshund2.gif": "/my-book/static/media/dachshund2.f0e219d44341460d6363.gif",
     "static/media/ebullixir-failed_elixir.mp4": "/my-book/static/media/ebullixir-failed_elixir.0ee4e0e6a4408407fa79.mp4",
     "static/media/ebullixir-success_elixir.mp4": "/my-book/static/media/ebullixir-success_elixir.1c2647193829b0a79bc7.mp4",
@@ -34,6 +35,7 @@
     "static/media/25_map.png": "/my-book/static/media/25_map.96ba4df7bf491b21b248.png",
     "static/media/patternrun-double_jump.mp4": "/my-book/static/media/patternrun-double_jump.4c2750edcf23bf6e4a49.mp4",
     "static/media/tuto2.mp4": "/my-book/static/media/tuto2.f154269e91c7741b4749.mp4",
+    "static/media/02_she-ra_sword.fbx": "/my-book/static/media/02_she-ra_sword.360d1880c3f738af3ffc.fbx",
     "static/media/BN-ship_placement.mp4": "/my-book/static/media/BN-ship_placement.e8cf95f0872ba793df37.mp4",
     "static/media/personaljsframework.png": "/my-book/static/media/personaljsframework.30d3ce9c255398a9fbae.png",
     "static/media/pathfinder-main.png": "/my-book/static/media/pathfinder-main.e4c8af42f6d622d573b6.png",
@@ -76,10 +78,10 @@
     "static/media/xraychest-matrice_confusion1.png": "/my-book/static/media/xraychest-matrice_confusion1.cfb9d4ead7bb6cc334b5.png",
     "index.html": "/my-book/index.html",
     "main.d4889995.css.map": "/my-book/static/css/main.d4889995.css.map",
-    "main.4ebb73c8.js.map": "/my-book/static/js/main.4ebb73c8.js.map"
+    "main.2e166cc3.js.map": "/my-book/static/js/main.2e166cc3.js.map"
   },
   "entrypoints": [
     "static/css/main.d4889995.css",
-    "static/js/main.4ebb73c8.js"
+    "static/js/main.2e166cc3.js"
   ]
 }
