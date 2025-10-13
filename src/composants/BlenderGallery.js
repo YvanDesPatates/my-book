@@ -39,7 +39,7 @@ function BlenderGalleryInner() {
     return (
         <div className="blender-gallery container mx-auto px-4 pb-12 max-w-6xl">
             <R3FModelViewer />
-            <div className="space-y-6">
+            <div className="space-y-4">
                 {blocks.map((block, bIdx) => {
                     const largeOnRight = bIdx % 2 === 1;
                     /* for rendering order: if large on left, put large first, then smalls; if large on right, render smalls first then large */

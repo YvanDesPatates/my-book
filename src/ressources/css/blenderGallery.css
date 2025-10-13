@@ -106,3 +106,35 @@
     color: #fff;
     margin-top: 8px;
 }
+                
+/* Mobile behavior: stack large image first and show 2x2 smalls underneath
+   without changing desktop grid. We use flex-wrap and order to place the large tile first. */
+@media (max-width: 767px) {
+    .blender-block {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: stretch;
+    }
+
+    /* small thumbnail height on mobile */
+    .blender-block .item-small .gallery-thumb {
+        height: 120px;
+    }
+
+    /* large should be the size of a 2x2 small block (2 * 120px + gap)
+       and be placed visually before the smalls using order */
+    .blender-block .item-large {
+        order: -1;
+        flex: 0 0 100%;
+    }
+
+    .blender-block .item-large .gallery-thumb {
+        height: calc(120px * 2 + 8px);
+    }
+
+    /* small items take half width so two per row */
+    .blender-block .item-small {
+        flex: 0 0 calc(50% - 4px);
+    }
+}
