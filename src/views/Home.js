@@ -68,7 +68,7 @@ export default function Home() {
                 </div>
 
                 {/* Skills buttons */}
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-3xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-3xl mx-auto pb-20">
                     <p
                         className="skill-tag bg-white/80 backdrop-blur-sm rounded-full py-2 px-4 text-sm font-medium text-gray-700 hover:bg-white transition flex items-center justify-center space-x-2"
                         onClick={() => navigate(get_domaine_url('Game-Developer'))}
