@@ -1,9 +1,10 @@
-import React, { Suspense, useRef, useEffect } from 'react';
+import React, { Suspense, useRef, useEffect, useState } from 'react';
 import { Canvas, useLoader } from '@react-three/fiber';
 import { OrbitControls, Html, useProgress } from '@react-three/drei';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 import * as THREE from 'three';
 import modelFile from '../ressources/images/fbx_models/27_cat.fbx';
+import { useBlenderAssets } from './BlenderAssets';
 
 function Loader() {
     const { progress } = useProgress();
@@ -34,16 +35,45 @@ function Model({ url }) {
 }
 
 export default function R3FModelViewer({ modelUrl = modelFile, height = 360 }) {
+    const { models } = useBlenderAssets();
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        if (models && models.length > 0) {
+            const match = models.findIndex(m => m.src === modelUrl || m.name === modelUrl);
+            if (match >= 0) setIndex(match);
+        }
+    }, [models, modelUrl]);
+
+    const current = models && models.length > 0 ? models[index] : null;
+
+    const prev = () => setIndex(i => Math.max(0, i - 1));
+    const next = () => setIndex(i => Math.min((models || []).length - 1, i + 1));
+
     return (
         <div className="r3f-model-viewer container mx-auto px-4" style={{ marginBottom: 20 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+                <div>
+                    {models.length > 0 ? (
+                        <div style={{ fontSize: 14, color: '#666' }}>{models[index].name} ({index + 1}/{models.length})</div>
+                    ) : (
+                        <div style={{ fontSize: 14, color: '#666' }}>Aucun modèle 3D trouvé</div>
+                    )}
+                </div>
+                <div>
+                    <button onClick={prev} style={{ marginRight: 8 }} disabled={index <= 0}>Prev</button>
+                    <button onClick={next} disabled={index >= models.length - 1}>Next</button>
+                </div>
+            </div>
+
             <Canvas style={{ width: '100%', height }} camera={{ position: [0, 1.2, 3], fov: 45 }}>
                 <ambientLight intensity={0.6} />
                 <directionalLight position={[5, 10, 7.5]} intensity={0.8} />
                 <hemisphereLight skyColor={0xffffff} groundColor={0x444444} intensity={0.6} />
                 <Suspense fallback={<Loader />}>
-                    <Model url={modelUrl} />
+                    {current ? <Model url={current.src} /> : null}
                 </Suspense>
-                <OrbitControls enableZoom={false} enablePan={false} rotateSpeed={0.8} />
+                <OrbitControls enableZoom={true} enablePan={false} rotateSpeed={0.8} />
             </Canvas>
         </div>
     );

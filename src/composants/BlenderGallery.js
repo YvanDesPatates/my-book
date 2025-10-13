@@ -2,30 +2,18 @@ import React, {useState, useEffect} from 'react';
 import '../ressources/css/blenderGallery.css';
 import {CarouselModalManager} from '../App';
 import R3FModelViewer from './R3FModelViewer';
+import BlenderAssetsImporter, { useBlenderAssets } from './BlenderAssets';
 
 export default function BlenderGallery() {
-    const [media, setMedia] = useState([]);
+    return (
+        <BlenderAssetsImporter>
+            <BlenderGalleryInner />
+        </BlenderAssetsImporter>
+    );
+}
 
-    useEffect(() => {
-        // Try to use webpack's require.context to dynamically import all files in the blender folder
-        try {
-            const req = require.context('../ressources/images/blender', false, /.*\.(png|jpe?g|gif|mp4|mkv|webm)$/i);
-            // sort keys alphabetically for deterministic order
-            const keys = req.keys().sort();
-            const loadedAll = keys.map(key => {
-                const src = req(key);
-                const match = key.match(/\.([0-9a-z]+)$/i);
-                const ext = match ? match[1].toLowerCase() : '';
-                const type = (ext === 'mp4' || ext === 'mkv' || ext === 'webm') ? 'video' : 'image';
-                return {src, type, name: key.replace('./', '')};
-            });
-            setMedia(loadedAll);
-        } catch (e) {
-            // Fallback: if require.context is not available, log and keep media empty
-            console.error('require.context not available or failed to load blender assets', e);
-            setMedia([]);
-        }
-    }, []);
+function BlenderGalleryInner() {
+    const { media } = useBlenderAssets();
 
     if (!media || media.length === 0) {
         return (
