@@ -11,27 +11,87 @@ function Loader() {
     return <Html center>{Math.round(progress)} %</Html>;
 }
 
+// Utility to dispose of a material and its textures - Cache optimization
+function disposeMaterial(material) {
+    if (!material) return;
+    if (Array.isArray(material)) {
+        material.forEach(mat => disposeMaterial(mat));
+        return;
+    }
+    if (material.map) {
+        try { material.map.dispose(); } catch (e) {}
+    }
+    if (material.lightMap) { try { material.lightMap.dispose(); } catch (e) {} }
+    if (material.bumpMap) { try { material.bumpMap.dispose(); } catch (e) {} }
+    if (material.normalMap) { try { material.normalMap.dispose(); } catch (e) {} }
+    if (material.specularMap) { try { material.specularMap.dispose(); } catch (e) {} }
+    if (material.envMap) { try { material.envMap.dispose(); } catch (e) {} }
+    try { material.dispose(); } catch (e) {}
+}
+
+// Cache optimization
+function disposeObject(obj) {
+    if (!obj) return;
+    obj.traverse((child) => {
+        if (child.isMesh) {
+            if (child.geometry) {
+                try { child.geometry.dispose(); } catch (e) {}
+            }
+            if (child.material) {
+                disposeMaterial(child.material);
+            }
+        }
+    });
+}
+
 function Model({ url }) {
     const ref = useRef();
-    const obj = useLoader(FBXLoader, url);
+    const loaded = useLoader(FBXLoader, url);
+    const [instance, setInstance] = useState(null);
 
     useEffect(() => {
-        if (!obj) return;
-        // compute bounding box and normalize scale/center
-        const box = new THREE.Box3().setFromObject(obj);
-        const size = box.getSize(new THREE.Vector3());
-        const maxDim = Math.max(size.x, size.y, size.z);
-        const scale = maxDim > 0 ? 1.2 / maxDim : 1;
-        obj.scale.setScalar(scale);
-        // recenter
-        const box2 = new THREE.Box3().setFromObject(obj);
-        const center = box2.getCenter(new THREE.Vector3());
-        obj.position.x -= center.x;
-        obj.position.y -= center.y;
-        obj.position.z -= center.z;
-    }, [obj]);
+        if (!loaded) return;
+        // Clone the loaded object so we can dispose the clone without affecting the cache
+        let cloned;
+        try {
+            cloned = SkeletonUtils.clone(loaded);
+        } catch (e) {
+            // Fallback to shallow clone if SkeletonUtils fails
+            cloned = loaded.clone(true);
+        }
 
-    return <primitive ref={ref} object={obj} />;
+        // compute bounding box and normalize scale/center on the clone
+        try {
+            const box = new THREE.Box3().setFromObject(cloned);
+            const size = box.getSize(new THREE.Vector3());
+            const maxDim = Math.max(size.x, size.y, size.z);
+            const scale = maxDim > 0 ? 1.2 / maxDim : 1;
+            cloned.scale.setScalar(scale);
+            const box2 = new THREE.Box3().setFromObject(cloned);
+            const center = box2.getCenter(new THREE.Vector3());
+            cloned.position.x -= center.x;
+            cloned.position.y -= center.y;
+            cloned.position.z -= center.z;
+        } catch (e) {
+            console.warn('Model: bounding box/normalize failed', e);
+        }
+
+        setInstance(cloned);
+
+        return () => {
+            // dispose the clone and its resources to free memory
+            if (cloned) {
+                try {
+                    disposeObject(cloned);
+                } catch (e) {
+                    console.warn('Model: disposeObject failed', e);
+                }
+            }
+            setInstance(null);
+        };
+    }, [loaded, url]);
+
+    return instance ? <primitive ref={ref} object={instance} /> : null;
 }
 
 export default function R3FModelViewer({ modelUrl = modelFile, height = 360 }) {
