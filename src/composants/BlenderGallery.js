@@ -64,9 +64,16 @@ function BlenderGalleryInner() {
                                 return (
                                     <button key={originalIdx} className={`gallery-item ${itemClass}`} onClick={() => openAt(originalIdx)}>
                                         {m.type === 'image' ? (
-                                            <img src={m.src} alt={`blender-${originalIdx}`} className="gallery-thumb rounded-lg object-cover" />
+                                            <img src={m.thumbnail || m.src} alt={`blender-${originalIdx}`} className="gallery-thumb rounded-lg object-cover" />
                                         ) : (
-                                            <video src={m.src} className="gallery-thumb rounded-lg object-cover" muted loop playsInline autoPlay />
+                                            // For videos, show thumbnail if it's an image or a small video thumbnail if provided
+                                            (m.thumbnailType === 'image' ? (
+                                                <img src={m.thumbnail} alt={`blender-${originalIdx}`} className="gallery-thumb rounded-lg object-cover" />
+                                            ) : m.thumbnailType === 'video' ? (
+                                                <video src={m.thumbnail} className="gallery-thumb rounded-lg object-cover" muted loop playsInline autoPlay />
+                                            ) : (
+                                                <video src={m.src} className="gallery-thumb rounded-lg object-cover" muted loop playsInline />
+                                            ))
                                         )}
                                     </button>
                                 );
