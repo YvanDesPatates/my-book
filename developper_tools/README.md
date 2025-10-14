@@ -14,7 +14,27 @@ python resize_images.py
 
 Run these commands from the repository root. The examples below change into the `developper_tools` directory first so the virtual environment and installs are local to that folder.
 
-Linux / macOS
+#### FFmpeg (optional but recommended for MKV compression)
+
+The script can transcode `.mkv` files to `.mp4` using `ffmpeg` to reduce file size. `ffmpeg` is a system package (not a Python package) and must be installed separately.
+
+Install ffmpeg on common platforms:
+
+Linux (Debian/Ubuntu):
+```bash
+sudo apt update && sudo apt install ffmpeg
+```
+
+macOS (Homebrew):
+```bash
+brew install ffmpeg
+```
+
+Windows: download a build from https://ffmpeg.org/download.html or use a package manager like choco/scoop.
+
+If `ffmpeg` is not found the script will copy MKV files unchanged.
+
+#### Linux / macOS
 
 ```bash
 # move into the developer tools folder
@@ -33,7 +53,7 @@ pip install -r requirements.txt
 python resize_images.py
 ```
 
-Windows (PowerShell)
+#### Windows (PowerShell)
 
 ```powershell
 # move into the developer tools folder

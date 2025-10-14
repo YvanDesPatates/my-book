@@ -2,6 +2,9 @@ import os
 import shutil
 from PIL import Image
 import argparse
+import subprocess
+import shutil
+import sys
 
 # copy all media (images, m4v, etc) from ressources/images/blender to ressources/images/blender_miniature and resize them to 400*400
 # start by deleting the destination directory if it exists
@@ -22,6 +25,38 @@ def resize_and_copy_media(src_dir, dst_dir, size=(400, 400)):
                         img.save(dst_path)
                 except Exception as e:
                     print(f"Error resizing image {filename}: {e}")
+            elif ext in ['.mp4', '.m4v', '.webm', '.mkv']:
+                # For mkv files (and others if desired) we can transcode/re-encode to reduce size.
+                # If ffmpeg is available, transcode mkv -> mp4 (h264) with a moderate CRF. Others are copied by default.
+                if ext == '.mkv':
+                    # produce an mp4 output name
+                    base, _ = os.path.splitext(filename)
+                    out_filename = base + '.mp4'
+                    out_path = os.path.join(dst_dir, out_filename)
+                    try:
+                        # check ffmpeg availability
+                        subprocess.run(['ffmpeg', '-version'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+                    except Exception:
+                        print('ffmpeg not found; copying MKV as-is. To enable compression install ffmpeg.')
+                        shutil.copy2(src_path, dst_path)
+                        continue
+
+                    # build ffmpeg command: moderate quality (CRF 23) and reasonable preset
+                    cmd = [
+                        'ffmpeg', '-y', '-i', src_path,
+                        '-c:v', 'libx264', '-preset', 'medium', '-crf', '30',
+                        '-c:a', 'aac', '-b:a', '128k',
+                        out_path
+                    ]
+                    print(f'Transcoding {filename} -> {out_filename} (this may take a while)')
+                    try:
+                        subprocess.run(cmd, check=True)
+                    except subprocess.CalledProcessError as e:
+                        print(f'ffmpeg failed for {filename}: {e}; copying original instead')
+                        shutil.copy2(src_path, dst_path)
+                else:
+                    # For mp4/m4v/webm we just copy as-is (you can add transcoding if desired)
+                    shutil.copy2(src_path, dst_path)
             else:
                 shutil.copy2(src_path, dst_path)
 
