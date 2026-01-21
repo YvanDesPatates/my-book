@@ -1,5 +1,10 @@
 const project_info = [
     {
+        key: "plushnpeek",
+        name: "Plush'n'Peek",
+        imageName: "plush-main.mp4",
+    },
+    {
         key: "ebullixir",
         name: "Ebullixir",
         imageName: "ebullixir-home_run.mp4",
