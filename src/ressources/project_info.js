@@ -3,6 +3,19 @@ const project_info = [
         key: "plushnpeek",
         name: "Plush'n'Peek",
         imageName: "plush-main.mp4",
+        images: [],
+        short_desc: "Jeux vidéo d'énigmes/aventure multijoueur en ligne",
+        desc: "Avec une total liberté sur le sujet, ce projet de fin d'études m'as emmené à porter les casquettes de scrum master, de game designer et de game developer dans une équipe de 9 personnes.</br></br>" +
+            "Nous avons créé un jeu d'énigmes/aventure en multijoueur en ligne, où deux joueurs doivent coopérer pour avancer dans l'histoire. </br></br>" +
+            " - A l'origine du projet, j'ai conçu le <strong>game design document</strong> avec deux autres camarades eux aussi initiateur du projet. Une fois l'équipe recruté nous avons travaillé sur le game et level design avec les membres intéressés par ces sujets.</br></br>" +
+            " - en tant que <strong>scrum master</strong>, j'ai organisé les sprints, découpé, réparti et suivi les tâches de chacun. J'ai également organisé les réunions quotidiennes. Avec l'aide d'un autre membre nous avons suivi l'avancement du projet via un tableau Kanban et la mise en place de KPI afin de produire des rapports réguliers.</br></br>" +
+            " - en tant que <strong>game developer</strong>, j'ai eu un rôle transverse qui m'as emmené à collaborer avec les autres membres sur la majorité des features du jeu. J'ai également développé certaines features de A à Z.</br></br>" +
+            "Ce projet est pour moi le plus complet que j'ai réalisé en dehors du cadre professionnel. L'ampleur du projet, de nos ambitions et la taille de l'équipe m'ont permis d'apprendre énormément sur le développement de jeux vidéo en équipe, la gestion de projet et le game design.",
+        links: [
+            {name: "trailer", url: "https://youtu.be/RltWuMGKyQY"},
+            {name: "premier trailer", url: "https://youtu.be/34b7SQuMP2A?si=gdg3clHsLTTVbF7f"},
+        ],
+        tags: ["Unity", "C#", "Multijoueur", "Game Design", "Scrum", "Photon Engine"]
     },
     {
         key: "ebullixir",
