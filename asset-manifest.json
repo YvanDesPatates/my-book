@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-book/static/css/main.f7c82d3b.css",
-    "main.js": "/my-book/static/js/main.02bf3132.js",
+    "main.js": "/my-book/static/js/main.67bf5144.js",
     "static/media/03_broom.fbx": "/my-book/static/media/03_broom.afc2c8cdbbd6c1fee6af.fbx",
     "static/media/ebullixir-spider_and_client.mp4": "/my-book/static/media/ebullixir-spider_and_client.422d4ea85af2175fb7e8.mp4",
     "static/media/01_cat.fbx": "/my-book/static/media/01_cat.beb9105dc86127f056ef.fbx",
@@ -66,11 +66,11 @@
     "static/media/BN-shooting_ship.mp4": "/my-book/static/media/BN-shooting_ship.ed0dd6304c3731eb8792.mp4",
     "static/media/BN-wrong_ship_placement.mp4": "/my-book/static/media/BN-wrong_ship_placement.63b63d89890bf82a5427.mp4",
     "static/media/pixel_Y.png": "/my-book/static/media/pixel_Y.e9202766f2c93b4c18db.png",
+    "static/media/plush-main.mp4": "/my-book/static/media/plush-main.6fe9e73f21b051b97564.mp4",
     "static/media/tuto1.png": "/my-book/static/media/tuto1.1c271ff3dd768970a006.png",
     "static/media/whatsinpic-daschund-and-bike.mp4": "/my-book/static/media/whatsinpic-daschund-and-bike.61c7de47b6221724c98e.mp4",
     "static/media/poorsausage-laser.mp4": "/my-book/static/media/poorsausage-laser.4052a7b941f166ae3d65.mp4",
     "static/media/whatsinpic-lynx.mp4": "/my-book/static/media/whatsinpic-lynx.592fff741e71554a862e.mp4",
-    "static/media/plush-main.mp4": "/my-book/static/media/plush-main.f6aa61c81deea8cba90e.mp4",
     "static/media/30_ghost_anim.mkv": "/my-book/static/media/30_ghost_anim.da851b50efb5274bca95.mkv",
     "static/media/tuto2.png": "/my-book/static/media/tuto2.f4338c0a454993c1ff7c.png",
     "static/media/dachshund.gif": "/my-book/static/media/dachshund.55688a82fc60afac26ab.gif",
@@ -105,10 +105,10 @@
     "static/media/xraychest-matrice_confusion1.png": "/my-book/static/media/xraychest-matrice_confusion1.cfb9d4ead7bb6cc334b5.png",
     "index.html": "/my-book/index.html",
     "main.f7c82d3b.css.map": "/my-book/static/css/main.f7c82d3b.css.map",
-    "main.02bf3132.js.map": "/my-book/static/js/main.02bf3132.js.map"
+    "main.67bf5144.js.map": "/my-book/static/js/main.67bf5144.js.map"
   },
   "entrypoints": [
     "static/css/main.f7c82d3b.css",
-    "static/js/main.02bf3132.js"
+    "static/js/main.67bf5144.js"
   ]
 }
