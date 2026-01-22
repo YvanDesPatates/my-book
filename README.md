@@ -12,3 +12,9 @@ It is automatically published from the `main` branch using ci-cd :)
 npm i
 npm run start
 ```
+
+### Resources : images and videos managing
+
+for projects, images and videos should be 800*800.
+
+for blender, full images are rendered in the caroussel but in the main page they are reduced to 400*400.
