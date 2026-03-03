@@ -3,7 +3,7 @@ const project_info = [
         key: "plushnpeek",
         name: "Plush'n'Peek",
         imageName: "plush-main.mp4",
-        images: [],
+        images: ["plush-warehouse_poster.png", "plush-travelling_room.mp4", "plush-tap.mp4"],
         short_desc: "Jeux vidéo d'énigmes/aventure multijoueur en ligne",
         desc: "Avec une total liberté sur le sujet, ce projet de fin d'études m'as emmené à porter les casquettes de scrum master, de game designer et de game developer dans une équipe de 9 personnes.</br></br>" +
             "Nous avons créé un jeu d'énigmes/aventure en multijoueur en ligne, où deux joueurs doivent coopérer pour avancer dans l'histoire. </br></br>" +

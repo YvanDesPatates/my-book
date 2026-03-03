@@ -4,6 +4,8 @@ The resize_images Python script is used to process resources in the `src/ressour
 
 **Warning:** You have to run this script if you have added new content to `src/ressources/images/blender`.
 
+An other tool is available to resize only one image, could be usefool for project images. See the Manually reduce one or many images section after setted up the environment.
+
 ## Usage
 
 ```bash
@@ -73,8 +75,11 @@ python resize_images.py
 
 ```bash
 cd developper_tools
+source .venv/bin/activate
 python reduce_media.py ../src/ressources/images/blender/example.jpg ../src/ressources/images/blender/example.mkv
 ```
+
+this command wil create two things. An image with 400x400 size with path ./example_mini.png and a video with a widht of 720 pixels.
 
 #### Options disponibles
 
