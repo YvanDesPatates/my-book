@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-book/static/css/main.f7c82d3b.css",
-    "main.js": "/my-book/static/js/main.67bf5144.js",
+    "main.js": "/my-book/static/js/main.954fc3ed.js",
     "static/media/03_broom.fbx": "/my-book/static/media/03_broom.afc2c8cdbbd6c1fee6af.fbx",
     "static/media/ebullixir-spider_and_client.mp4": "/my-book/static/media/ebullixir-spider_and_client.422d4ea85af2175fb7e8.mp4",
     "static/media/01_cat.fbx": "/my-book/static/media/01_cat.beb9105dc86127f056ef.fbx",
@@ -53,10 +53,12 @@
     "static/media/14_hole.png": "/my-book/static/media/14_hole.81203f4c0f04da622b84.png",
     "static/media/ebullixir-home_run.mp4": "/my-book/static/media/ebullixir-home_run.d753973906f63999be0f.mp4",
     "static/media/ebullixir-showup.mp4": "/my-book/static/media/ebullixir-showup.c7db9e313e21426aafa3.mp4",
+    "static/media/plush-tap.mp4": "/my-book/static/media/plush-tap.c42bb4de3584831651bf.mp4",
     "static/media/29_map.png": "/my-book/static/media/29_map.887f3e9afd7dee6a1a85.png",
     "static/media/40_coin_coin.png": "/my-book/static/media/40_coin_coin.7837ba3e352492f5882b.png",
     "static/media/patternrun-double_jump.mp4": "/my-book/static/media/patternrun-double_jump.4c2750edcf23bf6e4a49.mp4",
     "static/media/tuto2.mp4": "/my-book/static/media/tuto2.f154269e91c7741b4749.mp4",
+    "static/media/plush-travelling_room.mp4": "/my-book/static/media/plush-travelling_room.6cf17bd5791fbbe748b8.mp4",
     "static/media/01__fire_anim.mp4": "/my-book/static/media/01__fire_anim.36d8ae9e6316c962a0e3.mp4",
     "static/media/02_she-ra_sword.fbx": "/my-book/static/media/02_she-ra_sword.360d1880c3f738af3ffc.fbx",
     "static/media/BN-ship_placement.mp4": "/my-book/static/media/BN-ship_placement.e8cf95f0872ba793df37.mp4",
@@ -69,6 +71,7 @@
     "static/media/plush-main.mp4": "/my-book/static/media/plush-main.6fe9e73f21b051b97564.mp4",
     "static/media/tuto1.png": "/my-book/static/media/tuto1.1c271ff3dd768970a006.png",
     "static/media/whatsinpic-daschund-and-bike.mp4": "/my-book/static/media/whatsinpic-daschund-and-bike.61c7de47b6221724c98e.mp4",
+    "static/media/plush-warehouse_poster.png": "/my-book/static/media/plush-warehouse_poster.33d1ff1a33b0df645b06.png",
     "static/media/poorsausage-laser.mp4": "/my-book/static/media/poorsausage-laser.4052a7b941f166ae3d65.mp4",
     "static/media/whatsinpic-lynx.mp4": "/my-book/static/media/whatsinpic-lynx.592fff741e71554a862e.mp4",
     "static/media/30_ghost_anim.mkv": "/my-book/static/media/30_ghost_anim.da851b50efb5274bca95.mkv",
@@ -105,10 +108,10 @@
     "static/media/xraychest-matrice_confusion1.png": "/my-book/static/media/xraychest-matrice_confusion1.cfb9d4ead7bb6cc334b5.png",
     "index.html": "/my-book/index.html",
     "main.f7c82d3b.css.map": "/my-book/static/css/main.f7c82d3b.css.map",
-    "main.67bf5144.js.map": "/my-book/static/js/main.67bf5144.js.map"
+    "main.954fc3ed.js.map": "/my-book/static/js/main.954fc3ed.js.map"
   },
   "entrypoints": [
     "static/css/main.f7c82d3b.css",
-    "static/js/main.67bf5144.js"
+    "static/js/main.954fc3ed.js"
   ]
 }
